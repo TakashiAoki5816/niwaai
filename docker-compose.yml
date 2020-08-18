@@ -14,6 +14,7 @@ services:
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/niwaai
+      - gem_data:/usr/local/bundle
     ports:
       - "3000:3000"
     depends_on:
@@ -22,5 +23,6 @@ services:
     tty: true
     command: bundle exec rails server -b 0.0.0.0
 volumes:
+  gem_data:
   mysql-data:
     driver: local
