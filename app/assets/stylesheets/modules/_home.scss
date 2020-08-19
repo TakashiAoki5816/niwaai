@@ -1,21 +1,47 @@
-.wrapper{
-  .header{
+.wrapper {
+  // ヘッダー
+  .header {
     height: 70px;
-    width: 100%;
+    width: 100vw;
     background-color: green;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    &__left{
-      .logo{
+    &__left {
+      .logo {
         margin-left: 20px;
       }
     }
-    &__right{
+    &__right {
       width: 15%;
-      .header-right{
+      .header-right {
         display: flex;
         justify-content: space-around;
+      }
+    }
+  }
+  // アプリ紹介
+  .mainApp {
+    height: 500px;
+    width: 100%;
+    background-color: khaki;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &__box {
+      position: absolute;
+      height: 300px;
+      text-align: center;
+      .App-name {
+        font-size: 35px;
+        font-weight: bold;
+      }
+      .introduce {
+        margin-top: 10px;
+        p {
+          font-size: 16px;
+        }
       }
     }
   }
