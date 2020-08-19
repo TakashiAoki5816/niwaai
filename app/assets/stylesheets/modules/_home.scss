@@ -1,0 +1,22 @@
+.wrapper{
+  .header{
+    height: 70px;
+    width: 100%;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__left{
+      .logo{
+        margin-left: 20px;
+      }
+    }
+    &__right{
+      width: 15%;
+      .header-right{
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+}
