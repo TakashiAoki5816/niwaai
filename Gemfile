@@ -46,3 +46,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails', "~> 2.0"
 gem 'devise'
+# bootstrap関連
+gem 'sassc', '~> 2.0.0'
+gem 'uglifier'
+gem 'jquery-rails'
+gem 'bootstrap'
