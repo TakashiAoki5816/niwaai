@@ -1,2 +1,73 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+.wrapper
+  -# ヘッダー
+  .header
+    .header__left
+      .logo 庭あい
+    .header__right
+      %ul.header-right
+        %li.post
+          投稿する
+        %li.user_name
+          =link_to "ユーザー名", "#"
+  -# アプリ紹介
+  .mainApp
+    = image_tag "pict/IMG_4331.jpeg", size: "1200x500"
+    .mainApp__box
+      .App-name
+        庭あい
+      .introduce
+        %p 庭園の数だけ歴史がある
+        %p あなたのお気に入りの庭園を共有しませんか？
+  .mainContents
+    .Contents-info
+      %h2.Contents-info__name 投稿一覧
+    -# 投稿一覧
+    .Contents
+      .Contents-box
+        .Contents-box__header
+          .title 庭園
+        .Contents-box__user
+          .user-image
+            = image_tag "pict/IMG_4608.jpeg", size: "50x50"
+          .username
+            たかし
+        .Contents-box__imagebox
+          .image
+            = image_tag "pict/IMG_4610.jpeg", size: "330x260"
+        .Contents-box__footer
+          .like
+            いいね！
+          .comment
+            コメント1件
+      .Contents-box
+        .Contents-box__header
+          .title 庭園
+        .Contents-box__user
+          .user-image
+            = image_tag "pict/IMG_4608.jpeg", size: "50x50"
+          .username
+            たかし
+        .Contents-box__imagebox
+          .image
+            = image_tag "pict/IMG_4610.jpeg", size: "330x260"
+        .Contents-box__footer
+          .like
+            いいね！
+          .comment
+            コメント1件
+      .Contents-box
+        .Contents-box__header
+          .title 庭園
+        .Contents-box__user
+          .user-image
+            = image_tag "pict/IMG_4608.jpeg", size: "50x50"
+          .username
+            たかし
+        .Contents-box__imagebox
+          .image
+            = image_tag "pict/IMG_4610.jpeg", size: "330x260"
+        .Contents-box__footer
+          .like
+            いいね！
+          .comment
+            コメント1件
