@@ -97,6 +97,10 @@
             padding-left: 10px;
           }
         }
+        &__titlebox {
+          height: 10%;
+          border-top: 1px solid grey;
+        }
         &__imagebox {
           height: 68%;
           background-color: lightcyan;
