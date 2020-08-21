@@ -7,11 +7,11 @@
       %ul.header-right
         %li.post
           投稿する
-        %li.user_name
-          =link_to "ユーザー名", "#"
+        %li.username
+          =link_to current_user.name, "#"
   -# アプリ紹介
   .mainApp
-    = image_tag "pict/IMG_4331.jpeg", size: "1200x500"
+    = image_tag "pict/kiyosumi.jpg", size: "1200x500"
     .mainApp__box
       .App-name
         庭あい
