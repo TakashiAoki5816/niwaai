@@ -4,11 +4,10 @@
     .header__left
       .logo 庭あい
     .header__right
-      %ul.header-right
-        %li.post
-          投稿する
-        %li.username
-          =link_to current_user.name, "#"
+      .post
+        投稿する
+      .username
+        =link_to current_user.name, "#"
   -# アプリ紹介
   .mainApp
     = image_tag "pict/kiyosumi.jpg", size: "1200x500"
