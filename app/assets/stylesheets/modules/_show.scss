@@ -1,6 +1,6 @@
 .main {
   .Postsbox {
-    height: 100vh;
+    height: auto;
     background-color: lightgreen;
     &__header {
       height: 50px;
@@ -27,8 +27,25 @@
       }
     }
     &__Imagebox {
-      height: 50%;
-      background-color: lightpink;
+      height: auto;
+      width: 100%;
+      position: relative;
+      display: flex;
+      .image {
+        width: 100%;
+        max-width: 100%;
+      }
+      .garden_namebox {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: auto;
+        background-color: lightsalmon;
+        .garden_name {
+        }
+      }
+    }
+    &__mainContent {
     }
   }
 }
