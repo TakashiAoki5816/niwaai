@@ -4,6 +4,7 @@
     background-color: lightgreen;
     &__header {
       height: 50px;
+      margin-bottom: 10px;
       background-color: lightsalmon;
       display: flex;
       justify-content: space-between;
@@ -41,11 +42,37 @@
         right: 0;
         height: auto;
         background-color: lightsalmon;
-        .garden_name {
+        &__garden_name {
         }
       }
     }
     &__mainContent {
+      .titlebox {
+        height: auto;
+        .title {
+          text-align: center;
+          font-size: 30px;
+          font-weight: bold;
+        }
+      }
+      .contentbox {
+        width: 80%;
+        height: auto;
+        margin: 10px auto;
+        .content {
+        }
+      }
+      .footer {
+        margin: 0 auto;
+        width: 80%;
+        background-color: lightskyblue;
+        &__box {
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: start;;
+        }
+      }
     }
   }
 }

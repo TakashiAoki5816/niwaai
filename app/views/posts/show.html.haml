@@ -14,7 +14,18 @@
     .Postsbox__Imagebox
       = image_tag @post.image.url, class: "image", size: "650x650"
       .garden_namebox
-        .garden_name
+        .garden_namebox__garden_name
           = @post.garden_name
     .Postsbox__mainContent
-      .title
+      .titlebox
+        .title
+          = @post.title
+      .contentbox
+        .content
+          = @post.content
+      .footer
+        .footer__box
+          .likebtn
+            いいね！
+          .tagbtn
+            清澄庭園
