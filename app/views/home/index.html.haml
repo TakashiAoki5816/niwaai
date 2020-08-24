@@ -4,11 +4,10 @@
     .header__left
       .logo 庭あい
     .header__right
-      %ul.header-right
-        %li.post
-          投稿する
-        %li.username
-          =link_to current_user.name, "#"
+      .post
+        = link_to "投稿する", new_post_path
+      .username
+        = link_to current_user.name, edit_user_registration_path(current_user)
   -# アプリ紹介
   .mainApp
     = image_tag "pict/kiyosumi.jpg", size: "1200x500"
@@ -23,51 +22,24 @@
       %h2.Contents-info__name 投稿一覧
     -# 投稿一覧
     .Contents
-      .Contents-box
-        .Contents-box__header
-          .title 庭園
-        .Contents-box__user
-          .user-image
-            = image_tag "pict/IMG_4608.jpeg", size: "50x50"
-          .username
-            たかし
-        .Contents-box__imagebox
-          .image
-            = image_tag "pict/IMG_4610.jpeg", size: "330x260"
-        .Contents-box__footer
-          .like
-            いいね！
-          .comment
-            コメント1件
-      .Contents-box
-        .Contents-box__header
-          .title 庭園
-        .Contents-box__user
-          .user-image
-            = image_tag "pict/IMG_4608.jpeg", size: "50x50"
-          .username
-            たかし
-        .Contents-box__imagebox
-          .image
-            = image_tag "pict/IMG_4610.jpeg", size: "330x260"
-        .Contents-box__footer
-          .like
-            いいね！
-          .comment
-            コメント1件
-      .Contents-box
-        .Contents-box__header
-          .title 庭園
-        .Contents-box__user
-          .user-image
-            = image_tag "pict/IMG_4608.jpeg", size: "50x50"
-          .username
-            たかし
-        .Contents-box__imagebox
-          .image
-            = image_tag "pict/IMG_4610.jpeg", size: "330x260"
-        .Contents-box__footer
-          .like
-            いいね！
-          .comment
-            コメント1件
+      - @posts.each do |post|
+        .Contents-box
+          .Contents-box__header
+            .title
+              = post.garden_name
+          .Contents-box__user
+            .user-image
+              = image_tag "pict/IMG_4608.jpeg", size: "50x50"
+            .username
+              = post.user.name
+          .Contents-box__titlebox
+            .title
+              = post.title
+          .Contents-box__imagebox
+            .image
+              = image_tag post.image.url, size: "330x260"
+          .Contents-box__footer
+            .like
+              いいね！
+            .comment
+              コメント1件

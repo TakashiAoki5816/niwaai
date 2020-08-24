@@ -1,0 +1,25 @@
+.Postsbox
+  .Postform
+    = form_with model: @post, local: true do |f|
+      %h2.Post-heading 新規投稿
+      .form-group.col-md-8
+        = f.label :garden_name, '庭園名'
+        %span.badge.badge-danger
+          必須
+        = f.text_field :garden_name, class: 'form-control', placeholder: '例： 清澄庭園'
+      .form-group.col-md-8
+        = f.label :title, 'タイトル'
+        %span.badge.badge-danger
+          必須
+        = f.text_field :title, class: 'form-control', placeholder: '例： 枯山水'
+      .form-group.col-md-8
+        = f.label :image, '画像'
+        %span.badge.badge-danger
+          必須
+        = f.file_field :image, class: 'form-control'
+      .form-group.col-md-8
+        = f.label :content, "説明"
+        = f.text_area :content, class: 'form-control'
+      .form-group
+        = f.submit '投稿する', class: 'btn btn-primary'
+

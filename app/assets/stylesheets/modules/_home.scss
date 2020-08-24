@@ -14,16 +14,18 @@
     }
     &__right {
       width: 15%;
-      .header-right {
-        display: flex;
-        justify-content: space-around;
-        .post {
+      display: flex;
+      justify-content: space-around;
+      .post {
+        a {
+          color: black;
+          text-decoration: none;
         }
-        .username {
-          a {
-            color: black;
-            text-decoration: none;
-          }
+      }
+      .username {
+        a {
+          color: black;
+          text-decoration: none;
         }
       }
     }
@@ -96,6 +98,10 @@
           .username {
             padding-left: 10px;
           }
+        }
+        &__titlebox {
+          height: 10%;
+          border-top: 1px solid grey;
         }
         &__imagebox {
           height: 68%;

@@ -1,0 +1,23 @@
+.Postsbox {
+  height: 100vh;
+  width: 100vw;
+  .Postform {
+    margin: 0 auto;
+    .Post-heading {
+      padding: 20px 0px 0px 20px;
+      margin-bottom: 30px;
+    }
+    .form-group {
+      margin-bottom: 2rem;
+    }
+    #post_content {
+      height: 150px;
+    }
+    .form-check {
+      margin-bottom: 40px;
+      label {
+        padding-right: 20px;
+      }
+    }
+  }
+}
