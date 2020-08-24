@@ -1,0 +1,16 @@
+.main
+  .Postsbox
+    .Postsbox__header
+      .left-header
+        .userimage
+          = image_tag "pict/IMG_4608.jpeg", size: "50x50"
+        .username
+          = @post.user.name
+      .right-header
+        .create-title
+          投稿日：
+        .create-date
+          = @post.created_at.strftime("%m月%d日")
+    -# .Postsbox__Imagebox
+    -#   = image_tag @post.image.url
+    -# .Postsbox__Content

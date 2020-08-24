@@ -1,0 +1,34 @@
+.main {
+  .Postsbox {
+    height: 100vh;
+    background-color: lightgreen;
+    &__header {
+      height: 50px;
+      background-color: lightsalmon;
+      display: flex;
+      justify-content: space-between;
+      .left-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .userimage {
+        }
+        .username {
+        }
+      }
+      .right-header {
+        display: flex;
+        align-items: center;
+        .create-title {
+        }
+        .create-date {
+
+        }
+      }
+    }
+    &__Imagebox {
+      height: 50%;
+      background-color: lightpink;
+    }
+  }
+}
