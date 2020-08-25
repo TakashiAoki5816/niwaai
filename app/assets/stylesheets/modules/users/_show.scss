@@ -10,6 +10,13 @@
     }
     &__email {
     }
+    &__edit {
+      display: flex;
+      justify-content: center;
+      .editbtn {
+        padding-right: 10px;
+      }
+    }
   }
   .user-detail {
     height: 80px;
