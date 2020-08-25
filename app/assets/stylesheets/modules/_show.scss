@@ -1,10 +1,12 @@
 .main {
   .Postsbox {
+    width: 80%;
+    margin: 0 auto;
     height: auto;
     background-color: lightgreen;
     &__header {
       height: 50px;
-      margin-bottom: 10px;
+      margin: 10px 0;
       background-color: lightsalmon;
       display: flex;
       justify-content: space-between;
@@ -29,7 +31,6 @@
     }
     &__Imagebox {
       height: auto;
-      width: 100%;
       position: relative;
       display: flex;
       .image {
@@ -63,14 +64,44 @@
         }
       }
       .footer {
-        margin: 0 auto;
-        width: 80%;
         background-color: lightskyblue;
         &__box {
           height: 50px;
           display: flex;
           align-items: center;
           justify-content: start;;
+        }
+      }
+    }
+    .Comments {
+      text-align: center;
+    }
+    // コメント一覧
+    &__Commentbox {
+      height: auto;
+      border: 1px solid gray;
+      .header {
+        height: 50px;
+        background-color: magenta;
+        display: flex;
+        justify-content: space-between;
+        &__left {
+          display: flex;
+          align-items: center;
+          .userimage {
+          }
+          .username {
+          }
+        }
+        &__right {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .Contents {
+        margin-top: 10px;
+        height: auto;
+        &__Comment {
         }
       }
     }
