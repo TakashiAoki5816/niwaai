@@ -15,7 +15,15 @@
     height: 80px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: magenta;
+    &__posts {
+    }
+    &__likes {
+    }
+    &__following {
+    }
+    &__follower {
+    }
   }
 }
