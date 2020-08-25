@@ -29,7 +29,25 @@
             いいね！
           .tagbtn
             清澄庭園
+        .footer__edit
+          .editbtn
+            = link_to "編集"
+          .deletebtn
+            = link_to "削除"
     .Comments コメント一覧
+    .Postsbox__Commentbox
+      .header
+        .header__left
+          .userimage
+            = image_tag "pict/IMG_4608.jpeg", size: "50x50"
+          .username
+            = @post.user.name
+        .header__right
+          .created-at
+            = @post.created_at.strftime("%m月%d日")
+      .Contents
+        .Contents__Comment
+          コメントコメントコメント
     .Postsbox__Commentbox
       .header
         .header__left

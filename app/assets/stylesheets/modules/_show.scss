@@ -65,11 +65,20 @@
       }
       .footer {
         background-color: lightskyblue;
+        display: flex;
+        justify-content: space-between;
         &__box {
           height: 50px;
           display: flex;
           align-items: center;
-          justify-content: start;;
+          justify-content: start;
+        }
+        &__edit {
+          display: flex;
+          align-items: center;
+          .editbtn {
+            padding-right: 10px;
+          }
         }
       }
     }
@@ -80,6 +89,8 @@
     &__Commentbox {
       height: auto;
       border: 1px solid gray;
+      border-radius: 10px;
+      margin-bottom: 10px;
       .header {
         height: 50px;
         background-color: magenta;
