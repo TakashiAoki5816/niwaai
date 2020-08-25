@@ -26,4 +26,59 @@
     &__follower {
     }
   }
+  .Contents {
+    display: flex;
+    height: auto;
+    width: 100%;
+    .Contents-box {
+      height: auto;
+      width: 25%;
+      background-color: lemonchiffon;
+      margin: 0 auto;
+      margin-top: 10px;
+      border: 1px solid gray;
+      border-radius: 10px;
+      &__header {
+        border-bottom: 1px solid gray;
+        .title {
+          text-align: center;
+        }
+      }
+      &__user {
+        height: 15%;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        .user-image {
+          height: 50px;
+          width: 50px;
+          background-color: lightgrey;
+        }
+        .username {
+          padding-left: 10px;
+        }
+      }
+      &__titlebox {
+        height: 10%;
+        border-top: 1px solid grey;
+      }
+      &__imagebox {
+        height: auto;
+        background-color: lightcyan;
+        position: relative;
+        .image {
+          position: absolute;
+          top: 5px;
+          left: 15px;
+        }
+      }
+      &__footer {
+        height: 10%;
+        display: flex;
+        align-items: center;
+        background-color: lightcoral;
+        padding: 0 20px;
+      }
+    }
+  }
 }
