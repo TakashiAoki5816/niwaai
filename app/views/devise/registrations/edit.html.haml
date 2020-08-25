@@ -15,10 +15,10 @@
       - if devise_mapping.confirmable? && resource.pending_reconfirmation?
         %div
           Currently waiting confirmation for: #{resource.unconfirmed_email}
-      -# .form-group
-      -#   = f.label :image, class: "form-label"
-      -#   %br/
-      -#   = f.file_field :image, autofocus: true, autocomplete: "image", class: "form-control"
+      .form-group
+        = f.label :image, class: "form-label"
+        %br/
+        = f.file_field :image, autofocus: true, autocomplete: "image", class: "form-control"
       .from-group
         = f.label :password, class: "form-label"
         %i (空欄のままなら変更しません)
