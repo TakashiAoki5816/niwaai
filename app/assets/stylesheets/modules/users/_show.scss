@@ -1,0 +1,21 @@
+.main {
+  height: auto;
+  margin: 0 auto;
+  .userInfo {
+    text-align: center;
+    margin-top: 10px;
+    &__image {
+    }
+    &__name {
+    }
+    &__email {
+    }
+  }
+  .user-detail {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: magenta;
+  }
+}
