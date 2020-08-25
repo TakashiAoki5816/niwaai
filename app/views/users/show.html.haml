@@ -1,0 +1,15 @@
+.main
+  .userInfo
+    .userInfo__image
+      = image_tag @user.image.url
+    .userInfo__name
+      = @user.name
+    .userInfo__email
+      = @user.email
+  -# .user-detail
+  -#   .user-detail__posts
+  -#     投稿
+  -#   .user-detail__following
+  -#     フォロー
+  -#   .user-detail__follower
+  -#     フォロワー
