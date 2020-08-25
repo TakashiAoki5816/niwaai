@@ -1,0 +1,45 @@
+.main
+  .Postsbox
+    .Postsbox__header
+      .left-header
+        .userimage
+          = image_tag "pict/IMG_4608.jpeg", size: "50x50"
+        .username
+          = @post.user.name
+      .right-header
+        .create-title
+          投稿日：
+        .create-date
+          = @post.created_at.strftime("%m月%d日")
+    .Postsbox__Imagebox
+      = image_tag @post.image.url, class: "image", size: "650x650"
+      .garden_namebox
+        .garden_namebox__garden_name
+          = @post.garden_name
+    .Postsbox__mainContent
+      .titlebox
+        .title
+          = @post.title
+      .contentbox
+        .content
+          = @post.content
+      .footer
+        .footer__box
+          .likebtn
+            いいね！
+          .tagbtn
+            清澄庭園
+    .Comments コメント一覧
+    .Postsbox__Commentbox
+      .header
+        .header__left
+          .userimage
+            = image_tag "pict/IMG_4608.jpeg", size: "50x50"
+          .username
+            = @post.user.name
+        .header__right
+          .created-at
+            = @post.created_at.strftime("%m月%d日")
+      .Contents
+        .Contents__Comment
+          コメントコメントコメント

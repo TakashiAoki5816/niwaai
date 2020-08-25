@@ -1,0 +1,109 @@
+.main {
+  .Postsbox {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    background-color: lightgreen;
+    &__header {
+      height: 50px;
+      margin: 10px 0;
+      background-color: lightsalmon;
+      display: flex;
+      justify-content: space-between;
+      .left-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .userimage {
+        }
+        .username {
+        }
+      }
+      .right-header {
+        display: flex;
+        align-items: center;
+        .create-title {
+        }
+        .create-date {
+
+        }
+      }
+    }
+    &__Imagebox {
+      height: auto;
+      position: relative;
+      display: flex;
+      .image {
+        width: 100%;
+        max-width: 100%;
+      }
+      .garden_namebox {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: auto;
+        background-color: lightsalmon;
+        &__garden_name {
+        }
+      }
+    }
+    &__mainContent {
+      .titlebox {
+        height: auto;
+        .title {
+          text-align: center;
+          font-size: 30px;
+          font-weight: bold;
+        }
+      }
+      .contentbox {
+        width: 80%;
+        height: auto;
+        margin: 10px auto;
+        .content {
+        }
+      }
+      .footer {
+        background-color: lightskyblue;
+        &__box {
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: start;;
+        }
+      }
+    }
+    .Comments {
+      text-align: center;
+    }
+    // コメント一覧
+    &__Commentbox {
+      height: auto;
+      border: 1px solid gray;
+      .header {
+        height: 50px;
+        background-color: magenta;
+        display: flex;
+        justify-content: space-between;
+        &__left {
+          display: flex;
+          align-items: center;
+          .userimage {
+          }
+          .username {
+          }
+        }
+        &__right {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .Contents {
+        margin-top: 10px;
+        height: auto;
+        &__Comment {
+        }
+      }
+    }
+  }
+}
