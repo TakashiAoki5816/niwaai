@@ -3,7 +3,6 @@
   .header {
     height: 70px;
     width: 100%;
-    background-color: green;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -60,7 +59,6 @@
   .mainContents {
     height: auto;
     width: 100%;
-    background-color: lavender;
     .ContentsInfo {
       margin-bottom: 50px;
       &__name {
@@ -76,7 +74,6 @@
       .Contents-box {
         height: auto;
         width: 40%;
-        background-color: lemonchiffon;
         margin: 0 auto;
         margin: 10px 20px 0 0;
         border: 1px solid gray;
@@ -84,19 +81,19 @@
         &__header {
           height: 50px;
           border-bottom: 1px solid gray;
+          margin: 0 auto;
           .title {
             text-align: center;
+            font-size: 18px;
           }
         }
         &__user {
           height: auto;
           display: flex;
           align-items: center;
-          padding-left: 10px;
           .user-image {
             height: 50px;
             width: 50px;
-            background-color: lightgrey;
           }
           .username {
             padding-left: 10px;
@@ -105,11 +102,13 @@
         &__titlebox {
           height: 50px;
           border-top: 1px solid grey;
+          .title {
+            font-size: 20px;
+          }
         }
         &__imagebox {
           height: 250px;
           width: 100%;
-          background-color: lightcyan;
           position: relative;
           .image {
             position: absolute;
