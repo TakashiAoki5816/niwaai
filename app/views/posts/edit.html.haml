@@ -1,7 +1,7 @@
 .Postsbox
   .Postform
     = form_with model: @post, local: true do |f|
-      %h2.Post-heading 新規投稿
+      %h2.Post-heading 投稿を編集
       .form-group.col-md-8
         = f.label :garden_name, '庭園名'
         %span.badge.badge-danger
@@ -21,5 +21,5 @@
         = f.label :content, "説明"
         = f.text_area :content, class: 'form-control'
       .form-group
-        = f.submit '投稿する', class: 'btn btn-primary'
+        = f.submit '編集する', class: 'btn btn-primary'
 
