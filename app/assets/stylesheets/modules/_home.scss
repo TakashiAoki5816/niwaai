@@ -38,27 +38,9 @@
   }
   // アプリ紹介
   .mainApp {
-    height: 500px;
-    background-color: khaki;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    &__box {
-      position: absolute;
-      top: 50px;
-      text-align: center;
-      .App-name {
-        font-size: 35px;
-        font-weight: bold;
-      }
-      .introduce {
-        margin-top: 10px;
-        p {
-          font-size: 16px;
-        }
-      }
-    }
+    height: 600px;
+    background-image: url(pict/kiyosumi.jpg);
+    background-size:cover;
   }
   // 投稿一覧
   .mainContents {
