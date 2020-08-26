@@ -1,0 +1,10 @@
+.header
+  .header__left
+    .logo 庭あい
+  .header__center
+    .logo 庭あい
+  .header__right
+    .post
+      = link_to "投稿する", new_post_path
+    .username
+      = link_to current_user.name, user_path(current_user)
