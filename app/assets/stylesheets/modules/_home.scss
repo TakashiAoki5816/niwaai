@@ -62,6 +62,7 @@
     width: 100%;
     background-color: lavender;
     .ContentsInfo {
+      margin-bottom: 50px;
       &__name {
         padding-top: 10px;
         text-align: center;
@@ -73,21 +74,22 @@
       height: auto;
       width: 100%;
       .Contents-box {
-        height: 50%;
-        width: 25%;
+        height: auto;
+        width: 40%;
         background-color: lemonchiffon;
         margin: 0 auto;
-        margin-top: 10px;
+        margin: 10px 20px 0 0;
         border: 1px solid gray;
         border-radius: 10px;
         &__header {
+          height: 50px;
           border-bottom: 1px solid gray;
           .title {
             text-align: center;
           }
         }
         &__user {
-          height: 15%;
+          height: auto;
           display: flex;
           align-items: center;
           padding-left: 10px;
@@ -101,11 +103,12 @@
           }
         }
         &__titlebox {
-          height: 10%;
+          height: 50px;
           border-top: 1px solid grey;
         }
         &__imagebox {
-          height: 68%;
+          height: 250px;
+          width: 100%;
           background-color: lightcyan;
           position: relative;
           .image {
@@ -115,11 +118,9 @@
           }
         }
         &__footer {
-          height: 10%;
+          height: 50px;
           display: flex;
           align-items: center;
-          background-color: lightcoral;
-          padding: 0 20px;
         }
       }
     }
