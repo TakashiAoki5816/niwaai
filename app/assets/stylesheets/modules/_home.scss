@@ -2,14 +2,20 @@
   // ヘッダー
   .header {
     height: 70px;
-    width: 100vw;
+    width: 100%;
     background-color: green;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     &__left {
       .logo {
         margin-left: 20px;
+      }
+    }
+    &__center {
+      .logo {
+        font-size: 30px;
       }
     }
     &__right {
@@ -33,7 +39,6 @@
   // アプリ紹介
   .mainApp {
     height: 500px;
-    width: 100%;
     background-color: khaki;
     display: flex;
     align-items: center;

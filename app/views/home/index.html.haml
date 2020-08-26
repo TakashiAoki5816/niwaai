@@ -3,20 +3,18 @@
   .header
     .header__left
       .logo 庭あい
+    .header__center
+      .logo 庭あい
     .header__right
       .post
         = link_to "投稿する", new_post_path
       .username
         = link_to current_user.name, user_path(current_user)
+
   -# アプリ紹介
   .mainApp
-    = image_tag "pict/kiyosumi.jpg", size: "1200x500"
-    .mainApp__box
       .App-name
-        庭あい
-      .introduce
-        %p 庭園の数だけ歴史がある
-        %p あなたのお気に入りの庭園を共有しませんか？
+    = image_tag "pict/kiyosumi.jpg", size: "1500x500"
   .mainContents
     .Contents-info
       %h2.Contents-info__name 投稿一覧
