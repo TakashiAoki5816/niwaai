@@ -42,12 +42,26 @@
     background-image: url(pict/kiyosumi.jpg);
     background-size:cover;
   }
+  .mainAppInfo {
+    text-align: center;
+    margin: 50px auto;
+    .App-name {
+      font-size: 35px;
+      font-weight: bold;
+    }
+    .introduce {
+      margin-top: 10px;
+      p {
+        font-size: 16px;
+      }
+    }
+  }
   // 投稿一覧
   .mainContents {
-    height: 800px;
+    height: auto;
     width: 100%;
     background-color: lavender;
-    .Contents-info {
+    .ContentsInfo {
       &__name {
         padding-top: 10px;
         text-align: center;
@@ -56,7 +70,7 @@
     }
     .Contents {
       display: flex;
-      height: 100%;
+      height: auto;
       width: 100%;
       .Contents-box {
         height: 50%;

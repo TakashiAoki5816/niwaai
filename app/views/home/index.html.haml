@@ -13,10 +13,15 @@
 
   -# アプリ紹介
   .mainApp
-
+  .mainAppInfo
+    .App-name
+      庭あい
+    .introduce
+      %p 庭園の数だけ歴史がある
+      %p あなたのお気に入りの庭園を共有しませんか？
   .mainContents
-    .Contents-info
-      %h2.Contents-info__name 投稿一覧
+    .ContentsInfo
+      %h2.ContentsInfo__name 投稿一覧
     -# 投稿一覧
     .Contents
       - @posts.each do |post|
