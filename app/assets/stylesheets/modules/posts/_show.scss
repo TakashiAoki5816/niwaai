@@ -84,6 +84,8 @@
     }
     .Comments {
       text-align: center;
+      font-size: 20px;
+      font-weight: bold;
     }
     // コメント一覧
     &__Commentbox {
@@ -93,7 +95,6 @@
       margin-bottom: 10px;
       .header {
         height: 50px;
-        background-color: magenta;
         display: flex;
         justify-content: space-between;
         &__left {
@@ -101,19 +102,32 @@
           align-items: center;
           .userimage {
           }
-          .username {
+          .right {
+            .username {
+            }
+            .created_at {
+
+            }
           }
-        }
-        &__right {
-          display: flex;
-          align-items: center;
         }
       }
       .Contents {
-        margin-top: 10px;
+        margin-top: 20px;
         height: auto;
         &__Comment {
         }
+      }
+    }
+    .Comments-form {
+      height: 200px;
+      width: 80%;
+      margin: 30px auto;
+      .input-text {
+        width: 100%;
+      }
+      .submit-btn {
+        width: 10%;
+        float: right;
       }
     }
   }
