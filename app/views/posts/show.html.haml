@@ -35,29 +35,17 @@
           .deletebtn
             = link_to "削除", post_path(@post.id), method: :delete
     .Comments コメント一覧
-    .Postsbox__Commentbox
-      .header
-        .header__left
-          .userimage
-            = image_tag "pict/IMG_4608.jpeg", size: "50x50"
-          .username
-            = @post.user.name
-        .header__right
-          .created-at
-            = @post.created_at.strftime("%m月%d日")
-      .Contents
-        .Contents__Comment
-          コメントコメントコメント
-    .Postsbox__Commentbox
-      .header
-        .header__left
-          .userimage
-            = image_tag "pict/IMG_4608.jpeg", size: "50x50"
-          .username
-            = @post.user.name
-        .header__right
-          .created-at
-            = @post.created_at.strftime("%m月%d日")
-      .Contents
-        .Contents__Comment
-          コメントコメントコメント
+    - @comments.each do |c|
+      .Postsbox__Commentbox
+        .header
+          .header__left
+            .userimage
+              = image_tag "pict/IMG_4608.jpeg", size: "50x50"
+            .right
+              .username
+                = @post.user.name
+              .created-at
+                = @post.created_at.strftime("%y年%m月%d日")
+        .Contents
+          .Contents__Comment
+            コメントコメントコメント
