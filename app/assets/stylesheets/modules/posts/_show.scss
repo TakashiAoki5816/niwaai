@@ -118,5 +118,17 @@
         }
       }
     }
+    .Comments-form {
+      height: 200px;
+      width: 80%;
+      margin: 30px auto;
+      .input-text {
+        width: 100%;
+      }
+      .submit-btn {
+        width: 10%;
+        float: right;
+      }
+    }
   }
 }
