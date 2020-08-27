@@ -1,13 +1,15 @@
 .wrapper {
   // アプリ紹介
   .mainApp {
-    height: 600px;
+    height: 800px;
     background-image: url(pict/kiyosumi.jpg);
     background-size:cover;
+    background-position: center center;
   }
   .mainAppInfo {
+    height: 250px;
     text-align: center;
-    margin: 50px auto;
+    margin: 80px auto;
     .App-name {
       font-size: 35px;
       font-weight: bold;
