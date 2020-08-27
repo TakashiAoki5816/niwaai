@@ -1,13 +1,13 @@
 class CommentsController < ApplicationController
   before_action :set_post
-  # def create
-  #   @comment = Comment.create(comment_params)
-  #   if @comment.save
-  #     redirect_to post_path(@post)
-  #   else
-  #     @comment =
-  #   end
-  # end
+  def create
+    @comment = Comment.create(comment_params)
+    if @comment.save
+      redirect_to post_path(@post)
+    else
+      redirect_to post_path(@post)
+    end
+  end
 
   private
   def comment_params
