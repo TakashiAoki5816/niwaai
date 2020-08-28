@@ -10,7 +10,7 @@
         .create-title
           投稿日：
         .create-date
-          = @post.created_at.strftime("%m月%d日")
+          = @post.created_at.strftime("%Y年%m月%d日")
     .Postsbox__Imagebox
       = image_tag @post.image.url, class: "image", size: "650x650"
       .garden_namebox
