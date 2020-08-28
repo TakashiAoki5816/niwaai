@@ -10,5 +10,8 @@ class LikesController < ApplicationController
     redirect_to post_path(@post)
   end
 
-
+  private
+  def set_post
+    @post = Post.find(params[:id])
+  end
 end
