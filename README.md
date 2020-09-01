@@ -1,24 +1,27 @@
-# README
+# 庭愛（にわあい）
+あなたが好きな日本庭園を見つけるをコンセプトにした共有サイトです。
+「投稿の閲覧や投稿」、「投稿にいいねやコメント機能」、「気に入ったユーザーのフォロー機能」などを通じて、「あなたの好きな日本庭園に出会うツール」としてご利用いただけます。
+URL:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+イメージ画像
 
-Things you may want to cover:
+## 構成
+- インフラ
+  - AWS(EC2, VPC)
+- フロントエンド
+  - Haml/Scss/JavaScript/jQuery
+- バックエンド
+  - Ruby 2.6.5
+  - Rails 6.0.3
+- Webサーバ
+  - Nginx
+- APサーバ
+  - Puma
+- データベース
 
-* Ruby version
+## クラウドアーキテクチャ
+画像
 
-* System dependencies
+## 特に見ていただきたい点
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 機能一覧
