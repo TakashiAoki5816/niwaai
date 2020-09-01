@@ -5,7 +5,7 @@ class Post < ApplicationRecord
   has_many :liked_users, through: :likes, source: :user
   mount_uploader :image, ImageUploader
   geocoded_by :address
-  after_validation :geocode
+  after_validation :geocode, if: :address_changed?
 
   validates :title, :garden_name, :image, presence: true
 end
