@@ -58,29 +58,43 @@
         = f.text_area :content, class: 'input-text'
         %br
         = f.submit 'コメントする', class: 'submit-btn'
-    %h2.gmap Google Map
-    #map
-    :css
-      #map {
-        height: 500px;
-        width: 800px;
-      }
-    :javascript
-      let map
+    - if @post.address.present?
+      %p.address 住所
+      = succeed "(\u4F4F\u6240\u540D\u8868\u793A)" do
+        %p= @post.address
+      = succeed "(\u5730\u56F3\u3092\u8868\u793A)" do
+        #map
+      :css
+        %style
+        #map{
+          height: 800px;
+          width: 800px;
+        }
+      :javascript
+        function initMap() {
 
-      function initMap(){
-        geocoder = new google.maps.Geocoder()
+            var test ={lat: #{@post.latitude}, lng: #{@post.longitude}};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: test
+            });
+            var transitLayer = new google.maps.TransitLayer();
+            transitLayer.setMap(map);
 
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 40.7828, lng:-73.9653},
-          zoom: 12,
-        });
+            var contentString = '住所：#{@post.address}';
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
 
-        marker = new google.maps.Marker({
-          position:  {lat: 40.7828, lng:-73.9653},
-          map: map
-        });
-      }
-    %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyBOgM_ZNyhuscOClFa7OHNg1GxuPTO-nbk&callback=initMap"}
+            var marker = new google.maps.Marker({
+                position:test,
+                map: map,
+                title: contentString
+            });
 
-
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+            });
+        }
+      %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBOgM_ZNyhuscOClFa7OHNg1GxuPTO-nbk&callback=initMap"}
+        :cdata

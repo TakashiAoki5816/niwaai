@@ -119,7 +119,7 @@
       }
     }
     .Comments-form {
-      height: 200px;
+      height: 100px;
       width: 80%;
       margin: 30px auto;
       .input-text {
@@ -130,11 +130,11 @@
         float: right;
       }
     }
-    .gmap {
-      height: 90%;
-      width: 90%;
+    .address {
     }
     #map {
+      height: 600px;
+      width: 1000px;
       margin: 0 auto;
     }
   }
