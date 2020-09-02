@@ -57,3 +57,4 @@ gem 'mini_magick'
 gem 'pry-rails'
 gem "gmaps4rails"
 gem "geocoder"
+gem 'dotenv-rails'

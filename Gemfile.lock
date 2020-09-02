@@ -86,6 +86,10 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.9.0)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -251,6 +255,7 @@ DEPENDENCIES
   byebug
   carrierwave
   devise
+  dotenv-rails
   geocoder
   gmaps4rails
   haml-rails (~> 2.0)
