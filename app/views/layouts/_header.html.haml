@@ -4,7 +4,9 @@
   .header__center
     .logo 庭あい
   .header__right
-    .post
-      = link_to "投稿する", new_post_path
-    .username
-      = link_to current_user.name, user_path(current_user)
+    - if user_signed_in? && current_user.email != "guest@example.com"
+      .post
+        = link_to "投稿する", new_post_path
+    - if user_signed_in?
+      .username
+        = link_to current_user.name, user_path(current_user)

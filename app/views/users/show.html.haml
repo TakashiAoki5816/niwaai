@@ -1,7 +1,8 @@
 .main
   .userInfo
-    .userInfo__image
-      = image_tag @user.image.url
+    -if @user.image.url.present?
+      .userInfo__image
+        = image_tag @user.image.url
     .userInfo__name
       = @user.name
     .userInfo__email
