@@ -5,4 +5,4 @@
         .user-image
           = image_tag user.image.url, size: "100x100"
         .user-name
-          = user.name
+          = link_to user.name, user_path(user)

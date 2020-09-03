@@ -2,7 +2,7 @@
   .userInfo
     -if @user.image.url.present?
       .userInfo__image
-        = image_tag @user.image.url
+        = image_tag @user.image.url, size: "100x100"
     .userInfo__name
       = @user.name
     .userInfo__email
@@ -15,9 +15,11 @@
     = render partial: "relationships/follow_button"
   .user-detail
     .user-detail__posts
-      投稿
+      = link_to "投稿数", user_posts_path(@user)
+      = @user.posts.count
     .user-detail__likes
       = link_to "いいねした投稿",likes_user_path(@user)
+      = @user.likes.count
     .user-detail__following
       = link_to "フォロー", user_following_path(@user)
       = @user.followings.count
