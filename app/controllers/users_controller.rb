@@ -12,4 +12,14 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @like = @user.likes
   end
+
+  def following
+    @user = User.find(params[:user_id])
+    @users = @user.followings.all
+  end
+
+  def followers
+    @user = User.find(params[:user_id])
+    @users = @user.followers.all
+  end
 end

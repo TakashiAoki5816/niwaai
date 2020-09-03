@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
   resources :users, only: [:index, :show] do
+    resources :posts, only: :index
+    get :following, to: 'users#following'
+    get :followers, to: 'users#followers'
     member do
       get :likes
     end
@@ -13,7 +16,6 @@ Rails.application.routes.draw do
   resources :posts, only: [:new, :create, :show, :edit, :update, :destroy] do
     resources :comments, only: :create
     resources :likes, only: [:create, :destroy]
-    resources :maps, only: [:index]
   end
   root to: 'home#index'
   resources :relationships, only: [:create, :destroy]

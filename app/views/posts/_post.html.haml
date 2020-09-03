@@ -1,13 +1,12 @@
-= render partial: "users/header"
 .Contents
-  - @post.each do |post|
+  - @posts.each do |post|
     .Contents-box
       .Contents-box__header
         .title
           = post.garden_name
       .Contents-box__user
         .user-image
-          = image_tag "pict/IMG_4608.jpeg", size: "50x50"
+          = image_tag post.user.image.url, size: "50x50"
         .username
           = post.user.name
       .Contents-box__titlebox
@@ -15,7 +14,7 @@
           = post.title
       .Contents-box__imagebox
         .image
-          = image_tag post.image.url, size: "330x260"
+          = image_tag post.image.url, size: "300x240"
       .Contents-box__footer
         .like
           いいね！
