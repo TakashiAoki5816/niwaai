@@ -8,5 +8,7 @@
       .post
         = link_to "投稿する", new_post_path
     - if user_signed_in?
+      .users
+        = link_to "ユーザー一覧", users_path
       .username
         = link_to current_user.name, user_path(current_user)

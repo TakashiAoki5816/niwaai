@@ -1,0 +1,18 @@
+.title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.users-info {
+  width: 100vw;
+  height: auto;
+  .userbox {
+    height: auto;
+    width: 80%;
+    margin: 10px auto ;
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 10px;
+  }
+}
