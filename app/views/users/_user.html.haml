@@ -1,0 +1,8 @@
+.users-info
+  - @users.each do |user|
+    -if user.email != "guest@example.com"
+      .userbox
+        .user-image
+          = image_tag user.image.url, size: "100x100"
+        .user-name
+          = user.name
