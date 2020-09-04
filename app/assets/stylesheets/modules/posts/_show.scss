@@ -88,33 +88,36 @@
       font-weight: bold;
     }
     // コメント一覧
-    &__Commentbox {
+    &__Commentsbox {
       height: auto;
-      border: 1px solid gray;
-      border-radius: 10px;
-      margin-bottom: 10px;
-      .header {
-        height: 50px;
-        display: flex;
-        justify-content: space-between;
-        &__left {
+      .Commentbox {
+        height: auto;
+        border: 1px solid gray;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        .header {
+          height: 50px;
           display: flex;
-          align-items: center;
-          .userimage {
-          }
-          .right {
-            .username {
+          justify-content: space-between;
+          &__left {
+            display: flex;
+            align-items: center;
+            .userimage {
             }
-            .created_at {
+            .right {
+              .username {
+              }
+              .created_at {
 
+              }
             }
           }
         }
-      }
-      .Contents {
-        margin-top: 20px;
-        height: auto;
-        &__Comment {
+        .Contents {
+          margin-top: 20px;
+          height: auto;
+          &__Comment {
+          }
         }
       }
     }

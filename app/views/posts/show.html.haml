@@ -39,8 +39,9 @@
           .deletebtn
             = link_to "削除", post_path(@post.id), method: :delete
     .Comments コメント一覧
+    .Postsbox__Commentsbox
     - @comments.each do |comment|
-      .Postsbox__Commentbox
+      .Commentbox
         .header
           .header__left
             .userimage
