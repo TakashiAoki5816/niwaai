@@ -54,10 +54,10 @@
           .Contents__Comment
             = comment.content
     .Comments-form
-      = form_with(model: [@post, @comment], local: true) do |f|
-        = f.text_area :content, class: 'input-text'
+      = form_with(model: [@post, @comment], local: true, id: "new_comment") do |f|
+        = f.text_area :content, class: 'textbox'
         %br
-        = f.submit 'コメントする', class: 'submit-btn'
+        = f.submit 'コメントする', class: 'form__submit'
     - if @post.address.present?
       %p.address 住所
       = succeed "(\u4F4F\u6240\u540D\u8868\u793A)" do
