@@ -36,5 +36,14 @@ $(function(){
       processData: false,
       contentType: false
     })
+    .done(function(data){
+      let html = buildHTML(data);
+      $('.Comments').append(html);
+      $('.textbox').val('');
+      $('.form__submit').prop('disabled', false);
+    })
+    .fail(function(){
+      alert('error');
+    })
   })
 })
