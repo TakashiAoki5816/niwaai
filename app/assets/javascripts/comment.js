@@ -1,6 +1,6 @@
 $(function(){
   function buildHTML(comment){
-    let html = `<div class="Postsbox__Commentbox">
+    let html = `<div class="Commentbox">
                   <div class="header">
                     <div class="header__left">
                       <div class="userimage">
@@ -38,7 +38,7 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      $('.Comments').append(html);
+      $('.Postsbox__Commentsbox').append(html);
       $('.textbox').val('');
       $('.form__submit').prop('disabled', false);
     })
