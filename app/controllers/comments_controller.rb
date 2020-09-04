@@ -2,10 +2,9 @@ class CommentsController < ApplicationController
   before_action :set_post
   def create
     @comment = Comment.create(comment_params)
-    if @comment.save
-      redirect_to post_path(@post)
-    else
-      redirect_to post_path(@post)
+    respond_to do |format|
+      format.html
+      format.json
     end
   end
 
