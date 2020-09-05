@@ -34,6 +34,7 @@ services:
     depends_on:
       - prod
 volumes:
+  gem_data:
   mysql-data:
     driver: local
   public-data:
