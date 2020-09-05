@@ -24,10 +24,9 @@
         .content
           = @post.content
       .like
-        .like__box#likes_buttons_{@post.id}
+        %div{:id => "likes_buttons_#{@post.id}", :class => "like__box"}
           = render partial: 'likes/like', locals: { post: @post}
-          .tagbtn
-            清澄庭園
+          .tagbtn 清澄庭園
         .footer__edit
           .editbtn
             = link_to "編集", edit_post_path(@post.id)
