@@ -1,12 +1,10 @@
 .header
   .header__left
-    = link_to "庭あい", root_path, class: "logo"
-  .header__center
-    .logo 庭あい
+    = link_to "庭会", root_path, class: "logo"
   .header__right
     - if user_signed_in? && current_user.email != "guest@example.com"
       .post
-        = link_to "投稿する", new_post_path
+        = link_to "新規投稿", new_post_path
     - if user_signed_in?
       .users
         = link_to "ユーザー一覧", users_path

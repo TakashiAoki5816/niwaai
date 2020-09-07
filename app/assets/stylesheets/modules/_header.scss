@@ -5,25 +5,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: radial-gradient(white,rgb(141, 223, 141));
   &__left {
     .logo {
       margin-left: 20px;
     }
   }
-  &__center {
-    .logo {
-      font-size: 30px;
-    }
-  }
   &__right {
-    width: 15%;
     display: flex;
     justify-content: space-around;
+    margin-right: 20px;
     .post {
+      padding-right: 20px;
       a {
         color: black;
         text-decoration: none;
       }
+    }
+    .users {
+      padding-right: 20px;
     }
     .username {
       a {
