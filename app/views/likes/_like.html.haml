@@ -1,0 +1,9 @@
+.likecount
+  = "いいね#{post.likes.count}件"
+.like-link
+  -if current_user.already_liked?(post)
+    = link_to post_like_path(post, id: post.likes[0].id), method: :delete, remote: true do
+      = icon("fas", "heart", class: "like")
+  -else
+    = link_to post_likes_path(post), method: :post, remote: true do
+      = icon("fas", "heart", class: "like")

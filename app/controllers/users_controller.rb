@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   def likes
     @user = User.find(params[:id])
-    @like = @user.likes
+    @likes = @user.likes
   end
 
   def following

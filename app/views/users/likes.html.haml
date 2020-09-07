@@ -1,7 +1,7 @@
 = render partial: "users/header"
 .title いいねした投稿
 .Contents
-  - @like.each do |like|
+  - @likes.each do |like|
     .Contents-box
       .Contents-box__header
         .title
@@ -19,6 +19,6 @@
           = image_tag like.post.image.url, size: "300x240"
       .Contents-box__footer
         .like
-          いいね！
+          = "いいね#{like.post.likes.count}件"
         .comment
-          コメント1件
+          = "コメント#{like.post.comments.count}件"
