@@ -12,22 +12,24 @@
   }
   .Contents {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     height: auto;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     .Contents-box {
       height: auto;
-      width: 40%;
-      margin: 0 auto;
-      margin: 10px 20px 0 0;
-      border: 1px solid gray;
+      width: 350px;
+      margin: 0 auto 50px auto;
+      border: 10px solid gray;
       border-radius: 10px;
       &__header {
         height: 50px;
         border-bottom: 1px solid gray;
-        margin: 0 auto;
+        margin-top: 10px;
         .title {
           text-align: center;
-          font-size: 18px;
+          font-size: 23px;
         }
       }
       &__user {
@@ -45,8 +47,9 @@
       &__titlebox {
         height: 50px;
         border-top: 1px solid grey;
+        padding-top: 10px;
         .title {
-          font-size: 20px;
+          font-size: 25px;
         }
       }
       &__imagebox {
@@ -54,15 +57,21 @@
         width: 100%;
         position: relative;
         .image {
+          height: auto;
           position: absolute;
-          top: 5px;
+          top: 0px;
           left: 15px;
         }
       }
       &__footer {
         height: 50px;
+        width: 90%;
+        margin: 0 auto;
         display: flex;
         align-items: center;
+        .like {
+          padding-right: 5px;
+        }
       }
     }
   }
