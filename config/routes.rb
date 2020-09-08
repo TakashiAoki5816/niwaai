@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
   resources :users, only: [:index, :show] do
-    resources :posts, only: :index
+    get :users, to: 'users#posts'
     get :following, to: 'users#following'
     get :followers, to: 'users#followers'
     member do

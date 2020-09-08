@@ -1,8 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   def index
-    @user = User.find(params[:user_id])
-    @posts = @user.posts.all
+    @posts = Post.all
   end
 
   def new

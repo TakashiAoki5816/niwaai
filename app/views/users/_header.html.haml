@@ -15,7 +15,7 @@
     = render partial: "relationships/follow_button"
   .user-detail
     .user-detail__posts
-      = link_to "投稿数", user_posts_path(@user)
+      = link_to "投稿数", user_users_path(@user)
       = @user.posts.count
     .user-detail__likes
       = link_to "いいねした投稿",likes_user_path(@user)
