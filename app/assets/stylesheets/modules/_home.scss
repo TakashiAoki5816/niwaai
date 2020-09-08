@@ -22,10 +22,10 @@
     }
   }
   .mainInfo {
-    height: 450px;
+    height: 480px;
     background-color: mediumaquamarine;
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
     &__left {
       width: 40%;
       background-color: rgb(160, 223, 165);
@@ -48,7 +48,32 @@
       background-position: center center;
     }
   }
-  .main
+  .mainGoogle {
+    height: 480px;
+    background-color: mediumaquamarine;
+    display: flex;
+    margin: 0 auto 50px auto;
+    &__left {
+      width: 60%;
+      background-image: url(pict/googlemap.png);
+      background-size:cover;
+      background-position: center center;
+    }
+    &__right {
+      width: 40%;
+      .right-title {
+        width: 70%;
+        margin: 30px auto 50px auto;
+      }
+      .content {
+        width: 70%;
+        margin: 0 auto;
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
   // 投稿一覧
   .mainContents {
     height: auto;
