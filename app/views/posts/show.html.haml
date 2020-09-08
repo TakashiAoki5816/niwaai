@@ -3,7 +3,7 @@
     .Postsbox__header
       .left-header
         .userimage
-          = image_tag "pict/IMG_4608.jpeg", size: "50x50"
+          = image_tag @post.user.image.url, size: "50x50"
         .username
           = @post.user.name
       .right-header
