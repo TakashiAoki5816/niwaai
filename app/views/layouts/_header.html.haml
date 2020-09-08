@@ -5,6 +5,8 @@
     - if user_signed_in? && current_user.email != "guest@example.com"
       .post
         = link_to "新規投稿", new_post_path
+      .posts
+        = link_to "投稿一覧", posts_path
     - if user_signed_in?
       .users
         = link_to "ユーザー一覧", users_path
