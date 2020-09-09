@@ -8,11 +8,21 @@
   height: auto;
   .userbox {
     height: auto;
-    width: 80%;
+    width: 90%;
     margin: 10px auto ;
     display: flex;
     align-items: center;
     border: 1px solid gray;
     border-radius: 10px;
+    .user-name {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    .user-following {
+      font-size: 10px;
+    }
+    .user-follower {
+      font-size: 10px;
+    }
   }
 }
