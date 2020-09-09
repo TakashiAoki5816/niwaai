@@ -5,18 +5,16 @@
   .ContentsInfo {
     margin-bottom: 50px;
     &__name {
-      padding-top: 10px;
+      padding-top: 30px;
       text-align: center;
       font-size: 30px;
     }
   }
   .Contents {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     height: auto;
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     .Contents-box {
       height: auto;
       width: 350px;
