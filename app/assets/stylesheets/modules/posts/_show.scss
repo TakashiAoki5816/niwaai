@@ -3,11 +3,10 @@
     width: 80%;
     margin: 0 auto;
     height: auto;
-    background-color: lightgreen;
+    border: 1px solid gray;
     &__header {
       height: 50px;
-      margin: 10px 0;
-      background-color: lightsalmon;
+      margin-bottom: 5px;
       display: flex;
       justify-content: space-between;
       .left-header {
@@ -41,18 +40,30 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        height: auto;
-        background-color: lightsalmon;
+        height: 50px;
+        width: 10%;
+        opacity: 0.8;
+        background-color: rgba(255,255,255,.8);
         &__garden_name {
+          font-size: 25px;
+          color: #383838;
+          float: right;
+          margin: 5px 5px 0 0;
         }
+      }
+    }
+    .edit {
+      float: right;
+      .editbtn {
       }
     }
     &__mainContent {
       .titlebox {
         height: auto;
+        margin-top: 10px;
         .title {
           text-align: center;
-          font-size: 30px;
+          font-size: 35px;
           font-weight: bold;
         }
       }
@@ -64,20 +75,21 @@
         }
       }
       .like {
-        background-color: lightskyblue;
+        width: 80%;
+        height: 10px;
+        margin: 0 auto;
         display: flex;
-        justify-content: space-between;
-        &__box {
-          height: 50px;
-          display: flex;
-          align-items: center;
-          justify-content: start;
-        }
-        &__edit {
-          display: flex;
-          align-items: center;
-          .editbtn {
-            padding-right: 10px;
+        .likebox {
+          .like-btn {
+            height: 30px;
+            font-size: 20px;
+            color: #808080;
+          }
+
+          .unlike-btn {
+            height: 30px;
+            font-size: 20px;
+            color: #e54747;
           }
         }
       }

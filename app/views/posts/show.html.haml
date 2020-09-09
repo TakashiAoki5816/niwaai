@@ -16,6 +16,11 @@
       .garden_namebox
         .garden_namebox__garden_name
           = @post.garden_name
+    .edit
+      .editbtn
+        = link_to "編集", edit_post_path(@post.id)
+      .deletebtn
+        = link_to "削除", post_path(@post.id), method: :delete
     .Postsbox__mainContent
       .titlebox
         .title
@@ -24,13 +29,8 @@
         .content
           = @post.content
       .like
-        %div{:id => "likes_buttons_#{@post.id}", :class => "like__box"}
+        %div{:id => "likes_buttons_#{@post.id}", :class => "likebox"}
           = render partial: 'likes/like', locals: { post: @post}
-        .footer__edit
-          .editbtn
-            = link_to "編集", edit_post_path(@post.id)
-          .deletebtn
-            = link_to "削除", post_path(@post.id), method: :delete
     .Comments コメント一覧
     .Postsbox__Commentsbox
       - @comments.each do |comment|
