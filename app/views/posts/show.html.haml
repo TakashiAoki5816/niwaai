@@ -35,8 +35,8 @@
     .Postsbox__Commentsbox
       - @comments.each do |comment|
         .Commentbox
-          .header
-            .header__left
+          .comment-header
+            .left
               .userimage
                 = image_tag comment.user.image.url, size: "50x50"
               .right
@@ -53,17 +53,9 @@
         %br
         = f.submit 'コメントする', class: 'form__submit'
     - if @post.address.present?
-      %p.address 住所
-      = succeed "(\u4F4F\u6240\u540D\u8868\u793A)" do
-        %p= @post.address
+      %p.address Map
       = succeed "(\u5730\u56F3\u3092\u8868\u793A)" do
         #map
-      :css
-        %style
-        #map{
-          height: 800px;
-          width: 800px;
-        }
       :javascript
         function initMap() {
 
