@@ -3,7 +3,7 @@
     .Postsbox__header
       .left-header
         .userimage
-          = image_tag "pict/IMG_4608.jpeg", size: "50x50"
+          = image_tag @post.user.image.url, size: "50x50"
         .username
           = @post.user.name
       .right-header
@@ -16,6 +16,11 @@
       .garden_namebox
         .garden_namebox__garden_name
           = @post.garden_name
+    .edit
+      .editbtn
+        = link_to "編集", edit_post_path(@post.id)
+      .deletebtn
+        = link_to "削除", post_path(@post.id), method: :delete
     .Postsbox__mainContent
       .titlebox
         .title
@@ -24,19 +29,14 @@
         .content
           = @post.content
       .like
-        %div{:id => "likes_buttons_#{@post.id}", :class => "like__box"}
+        %div{:id => "likes_buttons_#{@post.id}", :class => "likebox"}
           = render partial: 'likes/like', locals: { post: @post}
-        .footer__edit
-          .editbtn
-            = link_to "編集", edit_post_path(@post.id)
-          .deletebtn
-            = link_to "削除", post_path(@post.id), method: :delete
     .Comments コメント一覧
     .Postsbox__Commentsbox
       - @comments.each do |comment|
         .Commentbox
-          .header
-            .header__left
+          .comment-header
+            .left
               .userimage
                 = image_tag comment.user.image.url, size: "50x50"
               .right
@@ -53,17 +53,9 @@
         %br
         = f.submit 'コメントする', class: 'form__submit'
     - if @post.address.present?
-      %p.address 住所
-      = succeed "(\u4F4F\u6240\u540D\u8868\u793A)" do
-        %p= @post.address
+      %p.address Map
       = succeed "(\u5730\u56F3\u3092\u8868\u793A)" do
         #map
-      :css
-        %style
-        #map{
-          height: 800px;
-          width: 800px;
-        }
       :javascript
         function initMap() {
 

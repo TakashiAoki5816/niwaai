@@ -1,13 +1,13 @@
 .wrapper {
   // アプリ紹介
-  .mainApp {
+  .mainimage {
     height: 800px;
     background-image: url(pict/kiyosumi.jpg);
     background-size:cover;
     background-position: center center;
   }
   .mainAppInfo {
-    height: 250px;
+    height: 150px;
     text-align: center;
     margin: 80px auto;
     .App-name {
@@ -21,73 +21,94 @@
       }
     }
   }
-  // 投稿一覧
-  .mainContents {
-    height: auto;
-    width: 100%;
-    .ContentsInfo {
-      margin-bottom: 50px;
-      &__name {
-        padding-top: 10px;
-        text-align: center;
-        font-size: 30px;
+  .mainInfo {
+    height: 480px;
+    background-color: mediumaquamarine;
+    display: flex;
+    margin: 0 auto 50px auto;
+    &__left {
+      width: 40%;
+      background-color: rgb(160, 223, 165);
+      .left-title {
+        width: 70%;
+        margin: 30px auto 50px auto;
+      }
+      .content {
+        width: 70%;
+        margin: 0 auto;
+        p {
+          font-size: 18px;
+        }
       }
     }
-    .Contents {
-      display: flex;
-      height: auto;
-      width: 100%;
-      .Contents-box {
-        height: auto;
-        width: 40%;
+    &__right {
+      width: 60%;
+      background-image: url(pict/kiyosumi.jpg);
+      background-size:cover;
+      background-position: center center;
+    }
+  }
+  .mainGoogle {
+    height: 480px;
+    background-color: mediumaquamarine;
+    display: flex;
+    margin: 0 auto 50px auto;
+    &__left {
+      width: 60%;
+      background-image: url(pict/googlemap.png);
+      background-size:cover;
+      background-position: center center;
+    }
+    &__right {
+      width: 40%;
+      .right-title {
+        width: 70%;
+        margin: 30px auto 50px auto;
+      }
+      .content {
+        width: 70%;
         margin: 0 auto;
-        margin: 10px 20px 0 0;
-        border: 1px solid gray;
-        border-radius: 10px;
-        &__header {
-          height: 50px;
-          border-bottom: 1px solid gray;
-          margin: 0 auto;
-          .title {
-            text-align: center;
-            font-size: 18px;
-          }
-        }
-        &__user {
-          height: auto;
-          display: flex;
-          align-items: center;
-          .user-image {
-            height: 50px;
-            width: 50px;
-          }
-          .username {
-            padding-left: 10px;
-          }
-        }
-        &__titlebox {
-          height: 50px;
-          border-top: 1px solid grey;
-          .title {
-            font-size: 20px;
-          }
-        }
-        &__imagebox {
-          height: 250px;
-          width: 100%;
-          position: relative;
-          .image {
-            position: absolute;
-            top: 5px;
-            left: 15px;
-          }
-        }
-        &__footer {
-          height: 50px;
-          display: flex;
-          align-items: center;
+        p {
+          font-size: 18px;
         }
       }
+    }
+  }
+  .mainPosts {
+    height: 480px;
+    background-color: mediumaquamarine;
+    display: flex;
+    margin: 0 auto 50px auto;
+    &__left {
+      width: 40%;
+      background-color: rgb(160, 223, 165);
+      .left-title {
+        width: 70%;
+        margin: 30px auto 50px auto;
+      }
+      .content {
+        width: 70%;
+        margin: 0 auto;
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+    &__right {
+      width: 60%;
+      background-image: url(pict/hasyokan.jpg);
+      background-size:cover;
+      background-position: center center;
+    }
+  }
+  .footer {
+    height: 70px;
+    background-color: olivedrab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .copyright {
+
     }
   }
 }

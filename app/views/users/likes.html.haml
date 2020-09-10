@@ -1,24 +1,26 @@
 = render partial: "users/header"
-.title いいねした投稿
-.Contents
-  - @likes.each do |like|
-    .Contents-box
-      .Contents-box__header
-        .title
-          = like.post.garden_name
-      .Contents-box__user
-        .user-image
-          = image_tag like.post.user.image.url, size: "50x50"
-        .username
-          = like.post.user.name
-      .Contents-box__titlebox
-        .title
-          = like.post.title
-      .Contents-box__imagebox
-        .image
-          = image_tag like.post.image.url, size: "300x240"
-      .Contents-box__footer
-        .like
-          = "いいね#{like.post.likes.count}件"
-        .comment
-          = "コメント#{like.post.comments.count}件"
+.mainContents
+  .ContentsInfo
+    %h2.ContentsInfo__name いいねした投稿
+  .Contents
+    - @likes.each do |like|
+      .Contents-box
+        .Contents-box__header
+          .title
+            = like.post.garden_name
+        .Contents-box__user
+          .user-image
+            = image_tag like.post.user.image.url, size: "50x50"
+          .username
+            = link_to like.post.user.name, user_path(like.post.user)
+        .Contents-box__titlebox
+          .title
+            = link_to like.post.title, post_path(like.post)
+        .Contents-box__imagebox
+          .image
+            = image_tag like.post.image.url, size: "300x240"
+        .Contents-box__footer
+          .like
+            = "いいね#{like.post.likes.count}件"
+          .comment
+            = "コメント#{like.post.comments.count}件"

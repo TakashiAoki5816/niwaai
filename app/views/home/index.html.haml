@@ -1,35 +1,45 @@
 .wrapper
   -# アプリ紹介
-  .mainApp
+  .mainimage
   .mainAppInfo
     .App-name
-      庭あい
+      庭会
     .introduce
-      %p 庭園の数だけ歴史がある
-      %p あなたのお気に入りの庭園を共有しませんか？
-  .mainContents
-    .ContentsInfo
-      %h2.ContentsInfo__name 投稿一覧
-    -# 投稿一覧
-    .Contents
-      - @posts.each do |post|
-        .Contents-box
-          .Contents-box__header
-            .title
-              = post.garden_name
-          .Contents-box__user
-            .user-image
-              = image_tag post.user.image.url, size: "50x50"
-            .username
-              = post.user.name
-          .Contents-box__titlebox
-            .title
-              = post.title
-          .Contents-box__imagebox
-            .image
-              = image_tag post.image.url, size: "300x240"
-          .Contents-box__footer
-            .like
-              いいね！
-            .comment
-              コメント1件
+      %p ふと庭園に足を運びたくなる
+      %p 庭会ではそんな癒しの空間を提供します
+  .mainInfo
+    .mainInfo__left
+      %h3.left-title 日本庭園とは・・・
+      .content
+        %p 日本庭園は日本の伝統文化として
+        %p 平安時代よりも前から存在しており
+        %p 現在では海外にも造られているほど
+        %p 世界的に広がりを見せています。
+        %p 庭会ではあなたのお気に入りの庭園写真を
+        %p 投稿できます！！
+        %p ぜひあなたのお気に入りの庭園を
+        %p 共有しましょう
+    .mainInfo__right
+  .mainGoogle
+    .mainGoogle__left
+    .mainGoogle__right
+      %h3.right-title 地図の表示
+      .content
+        %p 投稿する際に庭園の住所を入力すると
+        %p Google Mapであなたの投稿した
+        %p 庭園の場所が表示されます
+        %p 住所を入力してあなたの好きな庭園を広めましょう！！
+        %p 気になった庭園の場所も把握できます！！
+  .mainPosts
+    .mainPosts__left
+      %h3.left-title 一般的な機能の搭載
+      .content
+        %p 気になった投稿に対していいね
+        %p コメントをすることができます
+        %p 気になったユーザーをフォローする
+        %p こともできます！！
+        %p あなたのお気に入り庭園に
+        %p 出会いましょう！！
+    .mainPosts__right
+  .footer
+    .copyright Copyright(c) 2020 Niwaai Co.,Ltd

@@ -1,35 +1,39 @@
-.header {
-  height: 70px;
-  width: 100%;
+.main {
+  height: auto;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  &__left {
-    .logo {
-      margin-left: 20px;
+  .userInfo {
+    text-align: center;
+    margin-top: 10px;
+    &__image {
+    }
+    &__name {
+    }
+    &__email {
+    }
+    &__edit {
+      display: flex;
+      justify-content: center;
+      .editbtn {
+        padding-right: 10px;
+      }
     }
   }
-  &__center {
-    .logo {
-      font-size: 30px;
-    }
-  }
-  &__right {
-    width: 15%;
+  .user-detail {
+    height: 80px;
+    width: 90%;
     display: flex;
+    align-items: center;
     justify-content: space-around;
-    .post {
-      a {
-        color: black;
-        text-decoration: none;
-      }
+    margin: 0 auto;
+    border: 5px solid gray;
+    border-radius:
+    &__posts {
     }
-    .username {
-      a {
-        color: black;
-        text-decoration: none;
-      }
+    &__likes {
+    }
+    &__following {
+    }
+    &__follower {
     }
   }
 }
