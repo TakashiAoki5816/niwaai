@@ -1,8 +1,8 @@
 $(function(){
   function buildHTML(comment){
     let html = `<div class="Commentbox">
-                  <div class="header">
-                    <div class="header__left">
+                  <div class="comment-header">
+                    <div class="left">
                       <div class="userimage">
                         <img src="${comment.user_image}" width="50" height="50">
                       </div>
