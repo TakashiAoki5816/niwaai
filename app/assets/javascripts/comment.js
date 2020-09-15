@@ -20,6 +20,9 @@ $(function(){
                     <div class="Contents__Comment">
                       ${comment.content}
                     </div>
+                    <div class="Contents__destroy">
+                      <a rel="nofollow" data-method="delete" href="/posts/${comment.post}/comments/${comment.id}">削除</a>
+                    </div>
                   </div>
                 </div>`
     return html;

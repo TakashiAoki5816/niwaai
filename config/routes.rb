@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     end
   end
   resources :posts do
-    resources :comments, only: :create
+    resources :comments, only: [:create, :destroy]
     resources :likes, only: [:create, :destroy]
   end
   root to: 'home#index'

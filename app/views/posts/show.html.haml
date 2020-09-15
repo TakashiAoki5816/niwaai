@@ -47,6 +47,8 @@
           .Contents
             .Contents__Comment
               = comment.content
+            .Contents__destroy
+              = link_to "削除", post_comment_path(@post, comment), method: :delete
     .Comments-form
       = form_with(model: [@post, @comment], local: true, id: "new_comment") do |f|
         = f.text_area :content, class: 'textbox'
