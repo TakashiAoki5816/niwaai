@@ -7,8 +7,15 @@
   justify-content: space-between;
   background: radial-gradient(white,rgb(141, 223, 141));
   &__left {
+    display: flex;
     .logo {
       margin-left: 20px;
+    }
+    .searchform {
+      margin-left: 20px;
+      .search-input {
+        width: 80%;
+      }
     }
   }
   &__right {
