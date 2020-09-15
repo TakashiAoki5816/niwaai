@@ -19,7 +19,8 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Event.search(params[:keyword])
+    @posts = Post.search(params[:keyword])
+    @keyword = params[:keyword]
   end
 
   def show
