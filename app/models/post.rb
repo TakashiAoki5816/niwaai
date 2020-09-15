@@ -8,4 +8,9 @@ class Post < ApplicationRecord
   after_validation :geocode, if: :address_changed?
 
   validates :title, :garden_name, :image, presence: true
+
+  def self.search(search)
+    return Post.all unless search
+    Post.where('garden_name LIKE(?)', "%#{search}%")
+  end
 end

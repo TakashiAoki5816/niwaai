@@ -1,14 +1,17 @@
 .users-info
   - @users.each do |user|
-    -if user.email != "guest@example.com"
-      .userbox
-        .left
+    .userbox
+      .left
+        -if user.email == "guest@example.com"
+          .user-image
+            = image_tag "pict/guest.jpg",size: "100x100"
+        -else
           .user-image
             = image_tag user.image.url, size: "100x100"
-        .right
-          .user-name
-            = link_to user.name, user_path(user)
-          .user-following
-            = "フォロー#{user.followings.count}"
-          .user-follower
-            = "フォロワー#{user.followers.count}"
+      .right
+        .user-name
+          = link_to user.name, user_path(user)
+        .user-following
+          = "フォロー#{user.followings.count}"
+        .user-follower
+          = "フォロワー#{user.followers.count}"

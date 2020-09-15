@@ -1,0 +1,8 @@
+.mainContents
+  .ContentsInfo
+    %h2.ContentsInfo__name
+      -if @keyword.blank?
+        投稿一覧
+      - else
+        = "#{@keyword}の検索結果"
+  = render partial: "posts/post"
