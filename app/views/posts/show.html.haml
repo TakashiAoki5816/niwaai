@@ -48,7 +48,8 @@
             .Contents__Comment
               = comment.content
             .Contents__destroy
-              = link_to "削除", post_comment_path(@post, comment), method: :delete
+              = link_to post_comment_path(@post, comment), method: :delete do
+                %i.fas.fa-trash.trash
     .Comments-form
       = form_with(model: [@post, @comment], local: true, id: "new_comment") do |f|
         = f.text_area :content, class: 'textbox'
