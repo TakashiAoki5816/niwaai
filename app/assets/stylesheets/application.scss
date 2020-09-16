@@ -1,6 +1,8 @@
 @import "reset";
 @import "modules/flash";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "header";
 @import "modules/header";
 @import "modules/home";
@@ -9,5 +11,3 @@
 @import "modules/posts/show";
 @import "modules/users/show";
 @import "modules/users/index";
-@import "font-awesome-sprockets";
-@import "font-awesome";

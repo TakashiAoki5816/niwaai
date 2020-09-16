@@ -59,3 +59,4 @@ gem "gmaps4rails"
 gem "geocoder"
 gem 'dotenv-rails'
 gem 'font-awesome-sass'
+gem 'kaminari'

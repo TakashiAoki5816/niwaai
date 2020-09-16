@@ -21,6 +21,10 @@
             = image_tag like.post.image.url, size: "300x240"
         .Contents-box__footer
           .like
-            = "いいね#{like.post.likes.count}件"
+            %div{:id => "likes_buttons_#{like.post.id}", :class => "likebox"}
+              = render partial: 'likes/like', locals: { post: like.post}
           .comment
-            = "コメント#{like.post.comments.count}件"
+            %i.far.fa-comment-dots
+            = like.post.comments.count
+  .pagination
+    = paginate @likes

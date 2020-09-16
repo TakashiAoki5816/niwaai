@@ -18,7 +18,8 @@
           = image_tag post.image.url, size: "300x250"
       .Contents-box__footer
         .like
-          = icon("fas", "heart", class: "likebtn")
-          = post.likes.count
+          %div{:id => "likes_buttons_#{post.id}", :class => "likebox"}
+            = render partial: 'likes/like', locals: { post: post}
         .comment
-          = "コメント#{post.comments.count}件"
+          %i.far.fa-comment-dots
+          = post.comments.count
