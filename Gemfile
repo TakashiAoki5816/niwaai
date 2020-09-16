@@ -51,7 +51,6 @@ gem 'sassc', '~> 2.0.0'
 gem 'uglifier'
 gem 'jquery-rails'
 gem 'bootstrap'
-#carrierwave
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'pry-rails'

@@ -84,5 +84,5 @@
                 infowindow.open(map, marker);
             });
         }
-      %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBOgM_ZNyhuscOClFa7OHNg1GxuPTO-nbk&callback=initMap"}
+      %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?v=3.exp&key=#{ENV['GOOGLE_MAP_API_KEY']}&callback=initMap"}
         :cdata
