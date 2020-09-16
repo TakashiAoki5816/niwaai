@@ -24,3 +24,5 @@
             = "いいね#{like.post.likes.count}件"
           .comment
             = "コメント#{like.post.comments.count}件"
+.pagination
+  = paginate @likes
