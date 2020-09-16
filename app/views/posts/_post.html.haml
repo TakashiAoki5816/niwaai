@@ -21,4 +21,5 @@
           %div{:id => "likes_buttons_#{post.id}", :class => "likebox"}
             = render partial: 'likes/like', locals: { post: post}
         .comment
-          = "コメント#{post.comments.count}件"
+          %i.far.fa-comment-dots
+          = post.comments.count
