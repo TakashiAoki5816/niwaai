@@ -69,6 +69,19 @@
         align-items: center;
         .like {
           padding-right: 5px;
+          .likebox {
+            .like-btn {
+              height: 10px;
+              font-size: 20px;
+              color: #808080;
+            }
+
+            .unlike-btn {
+              height: 10px;
+              font-size: 20px;
+              color: #e54747;
+            }
+          }
         }
       }
     }
