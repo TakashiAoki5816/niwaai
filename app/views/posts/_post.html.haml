@@ -22,3 +22,5 @@
           = post.likes.count
         .comment
           = "コメント#{post.comments.count}件"
+.pagination
+  = paginate @posts
