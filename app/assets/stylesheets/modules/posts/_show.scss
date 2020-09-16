@@ -120,6 +120,11 @@
           justify-content: space-between;
           &__Comment {
           }
+          &__destroy {
+            .trash {
+              color: #383838;
+            }
+          }
         }
       }
     }
