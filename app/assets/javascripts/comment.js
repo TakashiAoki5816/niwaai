@@ -21,7 +21,9 @@ $(function(){
                       ${comment.content}
                     </div>
                     <div class="Contents__destroy">
-                      <a rel="nofollow" data-method="delete" href="/posts/${comment.post}/comments/${comment.id}">削除</a>
+                      <a rel="nofollow" data-method="delete" href="/posts/${comment.post}/comments/${comment.id}">
+                        <i class="fas fa-trash trash"></i>
+                      </a>
                     </div>
                   </div>
                 </div>`
