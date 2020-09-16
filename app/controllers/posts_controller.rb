@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
     if @post.save
-      redirect_to root_path, notice: '投稿されました'
+      redirect_to post_path(@post), notice: '投稿されました'
     else
       flash.now[:alert] = '必須項目を入力してください。'
       render :new
