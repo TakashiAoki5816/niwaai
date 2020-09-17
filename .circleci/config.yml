@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: bundle install
-          command: bundle install 
+          command: bundle install --path vendor/bundle
       - run:
           name: wait DB starting
           command: dockerize -wait tcp://127.0.0.1:3306 -timeout 1m
