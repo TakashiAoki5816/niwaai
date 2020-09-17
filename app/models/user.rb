@@ -9,6 +9,7 @@ class User < ApplicationRecord
     validates :email
   end
   validates :name, presence: true, length: { maximum: 10 }
+  validates :password, length: { minimum: 7 }
   has_many :posts, dependent: :destroy
   has_many :comments
   has_many :likes, dependent: :destroy
