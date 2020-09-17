@@ -2,7 +2,7 @@
   - @users.each do |user|
     .userbox
       .left
-        -if user.email == "guest@example.com"
+        -if user.image.url.nil?
           .user-image
             = image_tag "pict/guest.jpg",size: "100x100"
         -else
