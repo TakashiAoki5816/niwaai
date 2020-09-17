@@ -1,0 +1,35 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: circleci/ruby:2.6.6-node-browsers
+        environment:
+          RAILS_ENV: test
+      - image: circleci/mysql:8.0
+        environment:
+          MYSQL_ALLOW_EMPTY_PASSWORD: true
+          MYSQL_ROOT_PASSWORD: ''
+          MYSQL_DATABASE: ci_rails_sample_test
+    working_directory: ~/niwaai
+    steps:
+      - checkout
+      - run:
+          name: bundle install
+          command: bundle install 
+      - run:
+          name: wait DB starting
+          command: dockerize -wait tcp://127.0.0.1:3306 -timeout 1m
+      - run:
+          name: DB setup
+          command: bundle exec rake db:schema:load
+      - run: 
+          name: RSpec test
+          command: bundle exec rspec
+
+
+workflows:
+  version: 2.1
+  workflows:
+    jobs:
+      - test
