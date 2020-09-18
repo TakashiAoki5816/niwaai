@@ -63,3 +63,4 @@ gem "geocoder"
 gem 'dotenv-rails'
 gem 'font-awesome-sass'
 gem 'kaminari'
+gem 'fog-aws'
