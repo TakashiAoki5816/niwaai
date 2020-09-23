@@ -1,18 +1,5 @@
 .wrapper
   .mainimage
-    .Header
-      .Header__left
-        = link_to "Niwaai", root_path, class: "logo"
-        .searchform
-          - if user_signed_in?
-            = form_with(url: search_posts_path, local: true, method: :get) do |f|
-              = f.text_field :keyword, placeholder: "庭園名で検索する", class: "search-input"
-              = f.submit "検索", class: "search-btn"
-      - if user_signed_in? && current_user.email != "guest@example.com"
-        %ul.Header__right
-          %li.mypage
-            = link_to "マイページ", user_path(current_user)
-          %li.column
   -# アプリ紹介
   .mainAppInfo
     .App-name

@@ -1,53 +1,10 @@
 .wrapper {
   // アプリ紹介
   .mainimage {
-    height: 800px;
+    height: 600px;
     background-image: url(pict/kiyosumi.jpg);
     background-size:cover;
     background-position: center center;
-    .Header {
-      height: 70px;
-      width: 100%;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      &__left {
-        display: flex;
-        .logo {
-          margin-left: 15px;
-          font-size: 30px;
-          font-weight: bold;
-        }
-        .searchform {
-          margin: 10px 0 0 10px;
-          .search-input {
-            width: 80%;
-          }
-        }
-      }
-      &__right {
-        display: flex;
-        justify-content: space-around;
-        margin-right: 20px;
-        .post {
-          padding-right: 20px;
-          a {
-            color: black;
-            text-decoration: none;
-          }
-        }
-        .users {
-          padding-right: 20px;
-        }
-        .username {
-          a {
-            color: black;
-            text-decoration: none;
-          }
-        }
-      }
-    }
   }
   .mainAppInfo {
     height: 150px;
