@@ -5,14 +5,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: radial-gradient(white,rgb(141, 223, 141));
+  background-color: white;
   &__left {
     display: flex;
     .logo {
       margin-left: 20px;
+      font-size: 30px;
+      font-weight: bold;
     }
     .searchform {
-      margin-left: 20px;
+      margin: 10px 0 0 20px;
       .search-input {
         width: 80%;
       }
@@ -20,23 +22,23 @@
   }
   &__right {
     display: flex;
-    justify-content: space-around;
-    margin-right: 20px;
-    .post {
-      padding-right: 20px;
-      a {
-        color: black;
-        text-decoration: none;
-      }
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+    .new-post {
+      padding-right: 15px;
+    }
+    .posts {
+      padding-right: 15px;
     }
     .users {
-      padding-right: 20px;
+      padding-right: 15px;
     }
-    .username {
-      a {
-        color: black;
-        text-decoration: none;
-      }
+    .mypage {
+      padding-right: 15px;
+    }
+    a {
+      text-decoration-color: #383838;
     }
   }
 }
