@@ -1,33 +1,64 @@
 $(function(){
   function buildHTML(comment){
-    let html = `<div class="Commentbox">
-                  <div class="comment-header">
-                    <div class="left">
-                      <div class="userimage">
-                        <img src="${comment.user_image}" width="50" height="50">
-                      </div>
-                      <div class="right">
-                        <div class="username">
-                          <a href="/users/${comment.user_id}">${comment.user_name}</a>
+    if ( comment.user_name == 'ゲスト' ) {
+      let html = `<div class="Commentbox">
+                    <div class="comment-header">
+                      <div class="left">
+                        <div class="userimage">
+                          <img src="/assets/pict/guest.jpg" width="50" height="50">
                         </div>
-                        <div class="created-at">
-                          ${comment.created_at}
+                        <div class="right">
+                          <div class="username">
+                            <a href="/users/${comment.user_id}">${comment.user_name}</a>
+                          </div>
+                          <div class="created-at">
+                            ${comment.created_at}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="Contents">
-                    <div class="Contents__Comment">
-                      ${comment.content}
+                    <div class="Contents">
+                      <div class="Contents__Comment">
+                        ${comment.content}
+                      </div>
+                      <div class="Contents__destroy">
+                        <a rel="nofollow" data-method="delete" href="/posts/${comment.post}/comments/${comment.id}">
+                          <i class="fas fa-trash trash"></i>
+                        </a>
+                      </div>
                     </div>
-                    <div class="Contents__destroy">
-                      <a rel="nofollow" data-method="delete" href="/posts/${comment.post}/comments/${comment.id}">
-                        <i class="fas fa-trash trash"></i>
-                      </a>
+                  </div>`
+      return html;
+    } else {
+      let html =　`<div class="Commentbox">
+                    <div class="comment-header">
+                      <div class="left">
+                        <div class="userimage">
+                          <img src="${comment.user_image}" width="50" height="50">
+                        </div>
+                        <div class="right">
+                          <div class="username">
+                            <a href="/users/${comment.user_id}">${comment.user_name}</a>
+                          </div>
+                          <div class="created-at">
+                            ${comment.created_at}
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>`
-    return html;
+                    <div class="Contents">
+                      <div class="Contents__Comment">
+                        ${comment.content}
+                      </div>
+                      <div class="Contents__destroy">
+                        <a rel="nofollow" data-method="delete" href="/posts/${comment.post}/comments/${comment.id}">
+                          <i class="fas fa-trash trash"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>`
+      return html;
+    };
   }
   $('#new_comment').on('submit', function(e){
     e.preventDefault();
