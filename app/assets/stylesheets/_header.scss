@@ -2,6 +2,7 @@
   height: 70px;
   width: 100%;
   margin: 0 auto;
+  border-bottom: 1px solid #cecece;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,6 +13,7 @@
       margin-left: 20px;
       font-size: 30px;
       font-weight: bold;
+      color: #398a36;
     }
     .searchform {
       margin: 10px 0 0 20px;
@@ -38,7 +40,8 @@
       padding-right: 15px;
     }
     a {
-      text-decoration-color: #383838;
+      text-decoration-color: #424242;
+      color: #398a36;
     }
   }
 }
