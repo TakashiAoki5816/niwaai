@@ -1,6 +1,9 @@
 .main
   .userInfo
-    -if @user.image.url.present?
+    -if @user.image.url.nil?
+      .userInfo__image
+        = image_tag "pict/guest.jpg", size: "100x100"
+    -else
       .userInfo__image
         = image_tag @user.image.url, size: "100x100"
     .userInfo__name

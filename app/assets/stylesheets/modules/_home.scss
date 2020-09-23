@@ -1,34 +1,37 @@
 .wrapper {
+  background-color: #ffffff;
   // アプリ紹介
   .mainimage {
-    height: 800px;
+    height: 600px;
+    border-bottom: 1px solid #383838;
     background-image: url(pict/kiyosumi.jpg);
     background-size:cover;
     background-position: center center;
   }
   .mainAppInfo {
-    height: 150px;
     text-align: center;
     margin: 80px auto;
     .App-name {
-      font-size: 35px;
+      font-size: 50px;
       font-weight: bold;
+      color: #398a36;
+      margin-bottom: 30px;
     }
     .introduce {
       margin-top: 10px;
       p {
-        font-size: 16px;
+        font-size: 18px;
       }
     }
   }
   .mainInfo {
-    height: 480px;
-    background-color: mediumaquamarine;
+    height: 500px;
     display: flex;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 20px auto;
+    border: 1px solid #383838;
+    background-color: rgb(240, 240, 240);
     &__left {
       width: 40%;
-      background-color: rgb(160, 223, 165);
       .left-title {
         width: 70%;
         margin: 30px auto 50px auto;
@@ -49,10 +52,10 @@
     }
   }
   .mainGoogle {
-    height: 480px;
-    background-color: mediumaquamarine;
+    height: 500px;
+    border: 1px solid #383838;
     display: flex;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 20px auto;
     &__left {
       width: 60%;
       background-image: url(pict/googlemap.png);
@@ -61,6 +64,7 @@
     }
     &__right {
       width: 40%;
+      background-color: rgb(240, 240, 240);
       .right-title {
         width: 70%;
         margin: 30px auto 50px auto;
@@ -75,13 +79,14 @@
     }
   }
   .mainPosts {
-    height: 480px;
-    background-color: mediumaquamarine;
+    height: 500px;
+    margin: 0 auto 20px auto;
+    border: 1px solid #383838;
     display: flex;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 0 auto;
     &__left {
       width: 40%;
-      background-color: rgb(160, 223, 165);
+      background-color: rgb(240, 240, 240);
       .left-title {
         width: 70%;
         margin: 30px auto 50px auto;
@@ -103,7 +108,6 @@
   }
   .footer {
     height: 70px;
-    background-color: olivedrab;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -37,8 +37,12 @@
         .Commentbox
           .comment-header
             .left
-              .userimage
-                = image_tag comment.user.image.url, size: "50x50"
+              -if comment.user.image.url.nil?
+                .user-image
+                  = image_tag "pict/guest.jpg",size: "50x50"
+              -else
+                .user-image
+                  = image_tag comment.user.image.url, size: "50x50"
               .right
                 .username
                   = link_to comment.user.name, user_path(current_user)
