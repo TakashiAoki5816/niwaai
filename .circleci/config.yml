@@ -7,15 +7,22 @@ jobs:
         environment:
           RAILS_ENV: test
           MYSQL_HOST: 127.0.0.1
+          
       - image: circleci/mysql:8.0
         command: --default-authentication-plugin=mysql_native_password
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
           MYSQL_ROOT_HOST: '%'
+          
     working_directory: ~/niwaai
 
     steps:
       - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+          - v1-dependencies-
+          
       - run:
           name: docker-compose build
           command: docker-compose -f docker-compose.prod.yml build
