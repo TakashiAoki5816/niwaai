@@ -1,38 +1,33 @@
 version: 2.1
 
 jobs:
-  test:
+  build:
     docker:
       - image: circleci/ruby:2.6.6-node-browsers
         environment:
           RAILS_ENV: test
-      - image: circleci/mysql:8.0
+          MYSQL_HOST: 127.0.0.1
+      - image: circleci/mysql:5.6
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: true
           MYSQL_ROOT_PASSWORD: ''
           MYSQL_DATABASE: ci_rails_sample_test
     working_directory: ~/niwaai
+
     steps:
       - checkout
       - run:
-          name: bundle install
-          command: bundle install --path vendor/bundle
+          name: docker-compose build
+          command: docker-compose -f docker-compose.test.yml build
       - run:
-          name: wait DB starting
-          command: dockerize -wait tcp://127.0.0.1:3306 -timeout 1m
+          name: docker-compose up
+          command: docker-compose -f docker-compose.test.yml up 
       - run:
-          name: DB create
-          command: bundle exec rake db:create
+          name: sleep for waiting launch db
+          command: sleep 1
       - run:
-          name: DB migrate
-          command: bundle exec rake db:migrate
-      - run:
-          name: DB setup
-          command: bundle exec rake db:schema:load
-      - run: 
-          name: RSpec test
-          command: bundle exec rspec
-
+          name: create db
+          command: docker-compose -f docker-compose.test.yml run web rails db:create
 
 workflows:
   version: 2.1
