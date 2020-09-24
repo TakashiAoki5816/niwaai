@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
     if @post.save
-      redirect_to post_path(@post), notice: '投稿されました'
+      redirect_to post_path(@post), notice: '投稿が作成されました。'
     else
       flash.now[:alert] = '必須項目を入力してください。'
       render :new
@@ -37,7 +37,7 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     if post.update(post_params)
-      redirect_to post_path(post), notice: '投稿を編集しました'
+      redirect_to post_path(post), notice: '投稿を編集しました。'
     else
       render :edit
     end
@@ -46,7 +46,7 @@ class PostsController < ApplicationController
   def destroy
     post = Post.find(params[:id])
     if post.destroy
-      redirect_to root_path, notice: '投稿を削除しました'
+      redirect_to root_path, notice: '投稿を削除しました。'
     else
       render :edit
     end

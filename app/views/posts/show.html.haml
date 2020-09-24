@@ -2,8 +2,12 @@
   .Postsbox
     .Postsbox__header
       .left-header
-        .userimage
-          = image_tag @post.user.image.url, size: "50x50"
+        -if @post.user.image.url.nil?
+          .user-image
+            = image_tag "pict/guest.jpg",size: "50x50"
+        -else
+          .userimage
+            = image_tag @post.user.image.url, size: "50x50"
         .username
           = @post.user.name
       .right-header
@@ -16,11 +20,12 @@
       .garden_namebox
         .garden_namebox__garden_name
           = @post.garden_name
-    .edit
-      .editbtn
-        = link_to "編集", edit_post_path(@post.id)
-      .deletebtn
-        = link_to "削除", post_path(@post.id), method: :delete
+    -if user_signed_in? && current_user.id == @post.user_id
+      .edit
+        .editbtn
+          = link_to "編集", edit_post_path(@post.id)
+        .deletebtn
+          = link_to "削除", post_path(@post.id), method: :delete
     .Postsbox__mainContent
       .titlebox
         .title
@@ -54,11 +59,12 @@
             .Contents__destroy
               = link_to post_comment_path(@post, comment), method: :delete do
                 %i.fas.fa-trash.trash
-    .Comments-form
-      = form_with(model: [@post, @comment], local: true, id: "new_comment") do |f|
-        = f.text_area :content, class: 'textbox'
-        %br
-        = f.submit 'コメントする', class: 'form__submit'
+      -if user_signed_in?
+        .Comments-form
+          = form_with(model: [@post, @comment], local: true, id: "new_comment") do |f|
+            = f.text_area :content, class: 'textbox'
+            %br
+            = f.submit 'コメントする', class: 'form__submit'
     - if @post.address.present?
       %p.address Map
       = succeed "(\u5730\u56F3\u3092\u8868\u793A)" do

@@ -20,5 +20,5 @@
             .form-group
               = f.submit "ログイン", class: "btn btn-primary btn-block"
             .form-group
-              = link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class: 'btn btn-warning btn-block'
+              = link_to "ゲストログイン(閲覧用）", users_guest_sign_in_path, method: :post, class: 'btn btn-warning btn-block'
             = render "devise/shared/links"

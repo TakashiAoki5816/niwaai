@@ -9,7 +9,9 @@
         = f.text_field :garden_name, class: 'form-control', placeholder: '例： 清澄庭園'
       .form-group.col-md-8
         = f.label :address, '住所'
-        = f.text_area :address, autofocus: true ,class: 'form-control'
+        %span.badge.badge-success
+          任意
+        = f.text_area :address, rows: 1, autofocus: true ,class: 'form-control', placeholder: '例： 東京都江東区清澄3丁目3-9'
       .form-group.col-md-8
         = f.label :title, 'タイトル'
         %span.badge.badge-danger
@@ -21,7 +23,9 @@
           必須
         = f.file_field :image, class: 'form-control'
       .form-group.col-md-8
-        = f.label :content, "説明"
+        = f.label :content, "説明文"
+        %span.badge.badge-success
+          任意
         = f.text_area :content, class: 'form-control'
       .form-group
         = f.submit '投稿する', class: 'btn btn-primary submit'
