@@ -10,12 +10,12 @@
       = @user.name
     .userInfo__email
       = @user.email
-  -if user_signed_in? && current_user.id == @user.id
-    .userInfo__edit
-      .editbtn
-        = link_to "編集", edit_user_registration_path(current_user)
-      .deletebtn
-        = link_to "削除"
+    -if user_signed_in? && current_user.id == @user.id
+      .userInfo__edit
+        .editbtn
+          = link_to "編集", edit_user_registration_path(current_user)
+        .deletebtn
+          = link_to "削除"
     = render partial: "relationships/follow_button"
   .user-detail
     .user-detail__posts

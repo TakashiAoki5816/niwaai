@@ -56,15 +56,16 @@
           .Contents
             .Contents__Comment
               = comment.content
-            .Contents__destroy
-              = link_to post_comment_path(@post, comment), method: :delete do
-                %i.fas.fa-trash.trash
-      -if user_signed_in?
-        .Comments-form
-          = form_with(model: [@post, @comment], local: true, id: "new_comment") do |f|
-            = f.text_area :content, class: 'textbox'
-            %br
-            = f.submit 'コメントする', class: 'form__submit'
+            - if current_user.id == comment.user.id
+              .Contents__destroy
+                = link_to post_comment_path(@post, comment), method: :delete do
+                  %i.fas.fa-trash.trash
+    -if user_signed_in?
+      .Comments-form
+        = form_with(model: [@post, @comment], local: true, id: "new_comment") do |f|
+          = f.text_area :content, class: 'textbox'
+          %br
+          = f.submit 'コメントする', class: 'form__submit'
     - if @post.address.present?
       %p.address Map
       = succeed "(\u5730\u56F3\u3092\u8868\u793A)" do
