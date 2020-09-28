@@ -6,17 +6,17 @@
     - @likes.each do |like|
       .Contents-box
         .Contents-box__header
-          .title
+          .garden-name
             = like.post.garden_name
         .Contents-box__user
-        -if like.post.user.image.url.nil?
-          .user-image
-            = image_tag "pict/guest.jpg",size: "50x50"
-        -else
-          .userimage
-            = image_tag like.post.user.image.url, size: "50x50"
-          .username
-            = link_to like.post.user.name, user_path(like.post.user)
+          -if like.post.user.image.url.nil?
+            .user-image
+              = image_tag "pict/guest.jpg",size: "50x50"
+          -else
+            .user-image
+              = image_tag like.post.user.image.url, size: "50x50"
+            .username
+              = link_to like.post.user.name, user_path(like.post.user)
         .Contents-box__titlebox
           .title
             = link_to like.post.title, post_path(like.post)
@@ -26,7 +26,7 @@
         .Contents-box__footer
           -if user_signed_in?
             .like
-              %div{:id => "likes_buttons_#{@post.id}", :class => "likebox"}
+              %div{:id => "likes_buttons_#{like.post.id}", :class => "likebox"}
                 = render partial: 'likes/like', locals: { post: like.post }
           - else
             .like
