@@ -1,5 +1,5 @@
 .header {
-  height: 70px;
+  height: 75px;
   width: 100%;
   margin: 0 auto;
   border-bottom: 1px solid #cecece;
@@ -23,6 +23,7 @@
     align-items: center;
     justify-content: space-between;
     margin-right: 10px;
+    font-size: 18px;
     .new-post {
       padding-right: 15px;
     }
@@ -38,5 +39,12 @@
     a {
       color: #398a36;
     }
+
+    a:hover {
+      color: #56e962;
+      text-decoration: none;
+      background-color: rgb(184, 184, 184);
+    }
   }
 }
+

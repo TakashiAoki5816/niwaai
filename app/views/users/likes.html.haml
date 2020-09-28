@@ -15,8 +15,8 @@
           -else
             .user-image
               = image_tag like.post.user.image.url, size: "50x50"
-            .username
-              = link_to like.post.user.name, user_path(like.post.user)
+          .username
+            = link_to like.post.user.name, user_path(like.post.user)
         .Contents-box__titlebox
           .title
             = link_to like.post.title, post_path(like.post)

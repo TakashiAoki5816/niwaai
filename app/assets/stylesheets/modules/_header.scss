@@ -5,10 +5,13 @@
     text-align: center;
     margin-top: 10px;
     &__image {
+      margin-bottom: 5px;
     }
     &__name {
+      font-size: 20px;
     }
     &__email {
+      margin-bottom: 5px;
     }
     &__edit {
       display: flex;
@@ -16,6 +19,9 @@
       .editbtn {
         padding-right: 10px;
       }
+    }
+    #follow_form {
+      margin-bottom: 10px;
     }
   }
   .user-detail {
@@ -35,4 +41,22 @@
     &__follower {
     }
   }
+}
+
+.follow-now {
+  width: 6%;
+  padding: 2px;
+  border: 1px solid #747474;
+  border-radius: 100vh;
+  background-color: rgb(36, 177, 196);
+  color: rgb(243, 243, 243);
+  font-weight: bold;
+}
+.follows {
+  width: 6%;
+  padding: 2px;
+  color: #383838;
+  border: 1px solid #747474;
+  border-radius: 100vh;
+  background-color: white;
 }
