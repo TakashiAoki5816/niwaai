@@ -3,7 +3,7 @@
     width: 90%;
     margin: 20px auto;
     height: auto;
-    border: 10px solid rgb(173, 173, 173);
+    border: 10px solid rgb(150, 150, 150);
     border-radius: 10px;
     &__header {
       height: 50px;
@@ -58,6 +58,7 @@
       }
     }
     &__mainContent {
+      margin-bottom: 50px;
       .titlebox {
         height: auto;
         margin-top: 10px;
@@ -68,14 +69,14 @@
         }
       }
       .contentbox {
-        width: 80%;
+        width: 90%;
         height: auto;
         margin: 10px auto;
         .content {
         }
       }
       .like {
-        width: 80%;
+        width: 90%;
         height: 10px;
         margin: 0 auto;
         display: flex;
@@ -104,10 +105,10 @@
       height: auto;
       .Commentbox {
         height: auto;
-        width: 80%;
-        border: 1px solid gray;
-        border-radius: 10px;
-        margin: 0 auto 10px auto;
+        width: 90%;
+        padding: 8px;
+        margin: 0 auto 20px auto;
+        border: 1px solid #cecece;
         .comment-header {
           height: 50px;
           display: flex;
@@ -142,7 +143,7 @@
     }
     .Comments-form {
       height: 100px;
-      width: 80%;
+      width: 90%;
       margin: 30px auto;
       .textbox {
         width: 100%;
@@ -159,7 +160,7 @@
     }
     #map {
       height: 600px;
-      width: 80%;
+      width: 90%;
       margin: 0 auto;
     }
   }

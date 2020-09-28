@@ -9,7 +9,7 @@
           .userimage
             = image_tag @post.user.image.url, size: "50x50"
         .username
-          = @post.user.name
+          = link_to @post.user.name, user_path(@post.user)
       .right-header
         .create-title
           投稿日：
@@ -56,7 +56,7 @@
               .right
                 -if user_signed_in?
                   .username
-                    = link_to comment.user.name, user_path(current_user)
+                    = link_to comment.user.name, user_path(comment.user)
                 -else
                   .username
                     = comment.user.name
