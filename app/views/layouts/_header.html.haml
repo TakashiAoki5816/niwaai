@@ -24,3 +24,14 @@
       .logout
         %i.fas.fa-sign-out-alt
         = link_to "ログアウト", destroy_user_session_path, method: :delete
+  - else
+    .header__right
+      .posts
+        %i.fab.fa-leanpub
+        = link_to "投稿一覧", posts_path
+      .users
+        %i.fas.fa-users
+        = link_to "ユーザー一覧", users_path
+      .logout
+        %i.fas.fa-sign-out-alt
+        = link_to "ログイン", user_session_path
