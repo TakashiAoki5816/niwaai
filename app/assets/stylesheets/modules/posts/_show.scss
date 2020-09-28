@@ -6,7 +6,7 @@
     border: 10px solid rgb(150, 150, 150);
     border-radius: 10px;
     &__header {
-      height: 50px;
+      height: 60px;
       border-bottom: 1px solid gray;
       display: flex;
       justify-content: space-between;
@@ -17,6 +17,7 @@
         .userimage {
         }
         .username {
+          font-size: 16px;
           a {
             color: #383838;
           }
@@ -25,6 +26,7 @@
       .right-header {
         display: flex;
         align-items: center;
+        font-size: 18px;
         .create-title {
         }
         .create-date {
@@ -55,9 +57,48 @@
         }
       }
     }
-    .edit {
-      float: right;
-      .editbtn {
+    &__about {
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      .like {
+        height: auto;
+        display: flex;
+        .likebox {
+          a {
+            font-size: 25px;
+            color: #383838
+          }
+          .like-btn {
+            height: auto;
+            font-size: 25px;
+            color: #808080;
+          }
+          .unlike-btn {
+            height: auto;
+            font-size: 25px;
+            color: #e54747;
+          }
+        }
+      }
+      .edit {
+        .editbtn {
+          margin-bottom: 7px;
+          a {
+            padding: 5px;
+            border: 1px solid #747474;
+            background-color: rgb(97, 157, 235);
+            color: white;
+          }
+        }
+        .deletebtn {
+          a {
+            padding: 5px;
+            border: 1px solid #747474;
+            background-color: rgb(255, 52, 52);
+            color: #fff;
+          }
+        }
       }
     }
     &__mainContent {
@@ -76,24 +117,6 @@
         height: auto;
         margin: 10px auto;
         .content {
-        }
-      }
-      .like {
-        width: 90%;
-        height: 10px;
-        margin: 0 auto;
-        display: flex;
-        .likebox {
-          .like-btn {
-            height: 30px;
-            font-size: 20px;
-            color: #808080;
-          }
-          .unlike-btn {
-            height: 30px;
-            font-size: 20px;
-            color: #e54747;
-          }
         }
       }
     }

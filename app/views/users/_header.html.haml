@@ -2,10 +2,10 @@
   .userInfo
     -if @user.image.url.nil?
       .userInfo__image
-        = image_tag "pict/guest.jpg", size: "100x100"
+        = image_tag "pict/guest.jpg", size: "120x120"
     -else
       .userInfo__image
-        = image_tag @user.image.url, size: "100x100"
+        = image_tag @user.image.url, size: "120x120"
     .userInfo__name
       = @user.name
     .userInfo__email
@@ -15,12 +15,12 @@
         .editbtn
           = link_to "編集", edit_user_registration_path(current_user)
         .deletebtn
-          = link_to "削除", user_registration_path(current_user), method: :delete
+          = link_to "削除", user_registration_path(current_user), method: :delete, data: { confirm: 'アカウントを削除しますか？' }
     -if user_signed_in?
       = render partial: "relationships/follow_button"
   .user-detail
     .user-detail__posts
-      = link_to "投稿数", user_users_path(@user)
+      = link_to "投稿", user_users_path(@user)
       = @user.posts.count
     .user-detail__likes
       = link_to "いいねした投稿",likes_user_path(@user)

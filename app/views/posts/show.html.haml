@@ -4,10 +4,10 @@
       .left-header
         -if @post.user.image.url.nil?
           .user-image
-            = image_tag "pict/guest.jpg",size: "50x50"
+            = image_tag "pict/guest.jpg",size: "60x60"
         -else
           .userimage
-            = image_tag @post.user.image.url, size: "50x50"
+            = image_tag @post.user.image.url, size: "60x60"
         .username
           = link_to @post.user.name, user_path(@post.user)
       .right-header
@@ -16,16 +16,24 @@
         .create-date
           = @post.created_at.strftime("%Y年%m月%d日")
     .Postsbox__Imagebox
-      = image_tag @post.image.url, class: "image", size: "650x650"
+      = image_tag @post.image.url, class: "image", size: "750x750"
       .garden_namebox
         .garden_namebox__garden_name
           = @post.garden_name
-    -if user_signed_in? && current_user.id == @post.user_id
-      .edit
-        .editbtn
-          = link_to "編集", edit_post_path(@post.id)
-        .deletebtn
-          = link_to "削除", post_path(@post.id), method: :delete
+    .Postsbox__about
+      .like
+        -if user_signed_in?
+          %div{:id => "likes_buttons_#{@post.id}", :class => "likebox"}
+            = render partial: 'likes/like', locals: { post: @post}
+        - else
+          %i.fas.fa-heart.unlike-btn
+          = @post.likes.count
+      -if user_signed_in? && current_user.id == @post.user_id
+        .edit
+          .editbtn
+            = link_to "編集", edit_post_path(@post.id)
+          .deletebtn
+            = link_to "削除", post_path(@post.id), method: :delete
     .Postsbox__mainContent
       .titlebox
         .title
@@ -33,14 +41,6 @@
       .contentbox
         .content
           = @post.content
-      -if user_signed_in?
-        .like
-          %div{:id => "likes_buttons_#{@post.id}", :class => "likebox"}
-            = render partial: 'likes/like', locals: { post: @post}
-      - else
-        .like
-          %i.fas.fa-heart.unlike-btn
-          = @post.likes.count
     .Comments コメント一覧
     .Postsbox__Commentsbox
       - @comments.each do |comment|

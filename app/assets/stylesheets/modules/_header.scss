@@ -8,7 +8,7 @@
       margin-bottom: 5px;
     }
     &__name {
-      font-size: 20px;
+      font-size: 22px;
     }
     &__email {
       margin-bottom: 5px;
@@ -49,6 +49,7 @@
     margin: 0 auto;
     border: 5px solid gray;
     font-weight: normal;
+    font-size: 18px;
     &__posts {
     }
     &__likes {
@@ -61,7 +62,7 @@
 }
 
 .follow-now {
-  width: 6%;
+  width: 7%;
   padding: 3px;
   border: 1px solid #747474;
   border-radius: 100vh;
@@ -70,7 +71,7 @@
   font-weight: bold;
 }
 .follows {
-  width: 6%;
+  width: 7%;
   padding: 3px;
   color: #383838;
   border: 1px solid #747474;
