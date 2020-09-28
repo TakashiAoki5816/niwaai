@@ -1,13 +1,13 @@
 .main {
-  margin-top: 15px;
   .Postsbox {
     width: 90%;
-    margin: 0 auto;
+    margin: 20px auto;
     height: auto;
-    border: 1px solid gray;
+    border: 10px solid rgb(173, 173, 173);
+    border-radius: 10px;
     &__header {
       height: 50px;
-      margin-bottom: 5px;
+      border-bottom: 1px solid gray;
       display: flex;
       justify-content: space-between;
       .left-header {
@@ -41,15 +41,14 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        height: 50px;
-        width: 10%;
-        opacity: 0.8;
-        background-color: rgba(255,255,255,.8);
+        height: 70px;
+        width: auto;
+        background-color: rgba(255,255,255,.5);
         &__garden_name {
-          font-size: 25px;
+          font-size: 30px;
           color: #383838;
           float: right;
-          margin: 5px 5px 0 0;
+          margin: 15px auto;
         }
       }
     }
@@ -80,6 +79,18 @@
         height: 10px;
         margin: 0 auto;
         display: flex;
+        .likebox {
+          .like-btn {
+            height: 30px;
+            font-size: 20px;
+            color: #808080;
+          }
+          .unlike-btn {
+            height: 30px;
+            font-size: 20px;
+            color: #e54747;
+          }
+        }
       }
     }
     .Comments {
@@ -151,19 +162,5 @@
       width: 80%;
       margin: 0 auto;
     }
-  }
-}
-
-.likebox {
-  .like-btn {
-    height: 30px;
-    font-size: 20px;
-    color: #808080;
-  }
-
-  .unlike-btn {
-    height: 30px;
-    font-size: 20px;
-    color: #e54747;
   }
 }
