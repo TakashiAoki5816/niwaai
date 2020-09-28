@@ -25,26 +25,30 @@
     margin-right: 10px;
     font-size: 18px;
     .new-post {
-      padding-right: 15px;
+      padding-right: 20px;
     }
     .posts {
-      padding-right: 15px;
+      padding-right: 20px;
     }
     .users {
-      padding-right: 15px;
+      padding-right: 20px;
     }
     .mypage {
-      padding-right: 15px;
+      padding-right: 20px;
     }
     a {
       color: #398a36;
     }
 
     a:hover {
-      color: #56e962;
+      color: #46dd53;
       text-decoration: none;
-      background-color: rgb(184, 184, 184);
+      background-color: rgb(95, 95, 95);
     }
   }
+}
+
+.icon {
+  color: #398a36;
 }
 

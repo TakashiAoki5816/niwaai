@@ -15,7 +15,7 @@
         .editbtn
           = link_to "編集", edit_user_registration_path(current_user)
         .deletebtn
-          = link_to "削除"
+          = link_to "削除", user_registration_path(current_user), method: :delete
     -if user_signed_in?
       = render partial: "relationships/follow_button"
   .user-detail

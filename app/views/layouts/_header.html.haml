@@ -3,35 +3,34 @@
     = link_to root_path, class: "logo" do
       = image_tag "pict/niwaai-logo.png", size: "150x70"
     .searchform
-      - if user_signed_in?
-        = form_with(url: search_posts_path, local: true, method: :get) do |f|
-          = f.text_field :keyword, placeholder: "庭園名で検索する", class: "search-input"
-          = f.submit "検索", class: "search-btn"
+      = form_with(url: search_posts_path, local: true, method: :get) do |f|
+        = f.text_field :keyword, placeholder: "庭園名で検索する", class: "search-input"
+        = f.submit "検索", class: "search-btn"
   - if user_signed_in?
     .header__right
       .new-post
-        %i.fas.fa-edit
+        %i.fas.fa-edit.icon
         = link_to "新規投稿", new_post_path
       .posts
-        %i.fab.fa-leanpub
+        %i.fab.fa-leanpub.icon
         = link_to "投稿一覧", posts_path
       .users
-        %i.fas.fa-users
+        %i.fas.fa-users.icon
         = link_to "ユーザー一覧", users_path
       .mypage
-        %i.fa.fa-user
+        %i.fa.fa-user.icon
         = link_to "マイページ", user_path(current_user)
       .logout
-        %i.fas.fa-sign-out-alt
+        %i.fas.fa-sign-out-alt.icon
         = link_to "ログアウト", destroy_user_session_path, method: :delete
   - else
     .header__right
       .posts
-        %i.fab.fa-leanpub
+        %i.fab.fa-leanpub.icon
         = link_to "投稿一覧", posts_path
       .users
-        %i.fas.fa-users
+        %i.fas.fa-users.icon
         = link_to "ユーザー一覧", users_path
       .logout
-        %i.fas.fa-sign-out-alt
+        %i.fas.fa-sign-out-alt.icon
         = link_to "ログイン", user_session_path
