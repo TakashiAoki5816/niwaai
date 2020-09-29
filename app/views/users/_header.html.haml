@@ -26,7 +26,7 @@
       = link_to "いいねした投稿",likes_user_path(@user)
       = @user.likes.count
     .user-detail__following
-      = link_to "フォロー", user_following_path(@user)
+      = link_to "フォロー中", user_following_path(@user)
       = @user.followings.count
     .user-detail__follower
       = link_to "フォロワー", user_followers_path(@user)

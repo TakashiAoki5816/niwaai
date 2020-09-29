@@ -40,7 +40,6 @@
           width: 50px;
         }
         .username {
-          padding-left: 10px;
           a {
             color: #383838;
           }
@@ -80,6 +79,9 @@
         align-items: center;
         .like {
           padding-right: 5px;
+          a {
+            color: #383838;
+          }
           .likebox {
             .like-btn {
               height: 10px;

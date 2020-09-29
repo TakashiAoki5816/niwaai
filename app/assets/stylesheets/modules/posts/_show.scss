@@ -20,6 +20,9 @@
           font-size: 16px;
           a {
             color: #383838;
+            &:hover {
+              color: rgb(0, 132, 255);
+            }
           }
         }
       }
@@ -166,6 +169,9 @@
           &__destroy {
             .trash {
               color: #383838;
+              &:hover {
+                color: #415cf0
+              }
             }
           }
         }

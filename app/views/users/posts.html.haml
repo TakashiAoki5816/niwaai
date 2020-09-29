@@ -1,11 +1,7 @@
 = render partial: 'users/header'
 .mainContents
   .ContentsInfo
-    %h2.ContentsInfo__name 投稿一覧
-  - if @posts.present?
+    %h2.ContentsInfo__name 投稿
     = render partial: 'posts/post'
-  - else
-    .text まだ投稿がありません
-    = link_to "投稿を作成しに行く", new_post_path
 .pagination
   = paginate @posts
