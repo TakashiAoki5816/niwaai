@@ -82,18 +82,19 @@
         }
       }
       .edit {
+        margin-top: 7px;
         .editbtn {
-          margin-bottom: 7px;
+          margin-bottom: 18px;
           a {
-            padding: 5px;
+            padding: 10px;
             border: 1px solid #747474;
             background-color: rgb(97, 157, 235);
-            color: white;
+            color: #fff;
           }
         }
         .deletebtn {
           a {
-            padding: 5px;
+            padding: 10px;
             border: 1px solid #747474;
             background-color: rgb(255, 52, 52);
             color: #fff;
@@ -146,6 +147,9 @@
             }
             .right {
               .username {
+                a {
+                  color: #383838;
+                }
               }
               .created_at {
               }

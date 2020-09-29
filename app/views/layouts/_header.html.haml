@@ -7,30 +7,33 @@
         = f.text_field :keyword, placeholder: "庭園名で検索する", class: "search-input"
         = f.submit "検索", class: "search-btn"
   - if user_signed_in?
-    .header__right
-      .new-post
+    %ul.header__right
+      %li.new-post
         %i.fas.fa-edit.icon
         = link_to "新規投稿", new_post_path
-      .posts
+      %li.posts
         %i.fab.fa-leanpub.icon
         = link_to "投稿一覧", posts_path
-      .users
+      %li.users
         %i.fas.fa-users.icon
         = link_to "ユーザー一覧", users_path
-      .mypage
+      %li.mypage
         %i.fa.fa-user.icon
         = link_to "マイページ", user_path(current_user)
-      .logout
+      %li.logout
         %i.fas.fa-sign-out-alt.icon
         = link_to "ログアウト", destroy_user_session_path, method: :delete
   - else
-    .header__right
-      .posts
+    %ul.header__right
+      %li.posts
         %i.fab.fa-leanpub.icon
         = link_to "投稿一覧", posts_path
-      .users
+      %li.users
         %i.fas.fa-users.icon
         = link_to "ユーザー一覧", users_path
-      .logout
+      %li.sign_in
+        %i.fas.fa-sign-out-alt.icon
+        = link_to "新規登録", new_user_registration_path
+      %li.logout
         %i.fas.fa-sign-out-alt.icon
         = link_to "ログイン", user_session_path
