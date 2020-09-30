@@ -77,12 +77,9 @@
           %br
           = f.submit 'コメントする', class: 'form__submit'
     -else
-      .text コメントをするには新規登録/ログインが必要です
+      .text ※コメントをするには新規登録/ログインが必要です
     - if @post.address.present?
-      %p.address
-        = @post.garden_name
-      = succeed "(\u5730\u56F3\u3092\u8868\u793A)" do
-        #map
+      #map
       :javascript
         function initMap() {
 
@@ -98,12 +95,11 @@
             var infowindow = new google.maps.InfoWindow({
                 content: contentString
             });
-
             var marker = new google.maps.Marker({
-                position:test,
-                map: map,
-                title: contentString
-            });
+                          position:test,
+                          map: map,
+                          title: contentString
+                         });
 
             marker.addListener('click', function() {
                 infowindow.open(map, marker);
