@@ -5,17 +5,43 @@
     text-align: center;
     margin-top: 10px;
     &__image {
+      margin-bottom: 5px;
     }
     &__name {
+      font-size: 22px;
+      font-weight: bold;
     }
     &__email {
+      margin-bottom: 5px;
     }
     &__edit {
       display: flex;
       justify-content: center;
+      margin-bottom: 10px;
       .editbtn {
-        padding-right: 10px;
+        width: 4%;
+        padding: 2px;
+        margin-right: 10px;
+        border: 1px solid #747474;
+        border-radius: 100vh;
+        background-color: rgb(97, 157, 235);
+        a {
+          color: #fff;
+        }
       }
+      .deletebtn {
+        width: 4%;
+        padding: 2px;
+        border: 1px solid #747474;
+        border-radius: 100vh;
+        background-color: rgb(255, 52, 52);
+        a {
+          color: #fff;
+        }
+      }
+    }
+    #follow_form {
+      margin-bottom: 10px;
     }
   }
   .user-detail {
@@ -25,14 +51,31 @@
     align-items: center;
     justify-content: space-around;
     margin: 0 auto;
-    border: 5px solid gray;
-    &__posts {
+    border: 5px solid #acacac;
+    font-size: 18px;
+    a {
+      color: #383838;
     }
-    &__likes {
-    }
-    &__following {
-    }
-    &__follower {
+    a:hover {
+      color: rgb(0, 132, 255);
     }
   }
+}
+
+.follow-now {
+  width: 7%;
+  padding: 3px;
+  border: 1px solid #747474;
+  border-radius: 100vh;
+  background-color: rgb(36, 177, 196);
+  color: rgb(243, 243, 243);
+  font-weight: bold;
+}
+.follows {
+  width: 7%;
+  padding: 3px;
+  color: #383838;
+  border: 1px solid #747474;
+  border-radius: 100vh;
+  background-color: white;
 }

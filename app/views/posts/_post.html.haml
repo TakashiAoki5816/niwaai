@@ -3,7 +3,7 @@
   - @posts.each do |post|
     .Contents-box
       .Contents-box__header
-        .title
+        .garden-name
           = post.garden_name
       .Contents-box__user
         -if post.user.image.url.nil?
@@ -21,9 +21,14 @@
         .image
           = image_tag post.image.url, size: "300x250"
       .Contents-box__footer
-        .like
-          %div{:id => "likes_buttons_#{post.id}", :class => "likebox"}
-            = render partial: 'likes/like', locals: { post: post}
+        -if user_signed_in?
+          .like
+            %div{:id => "likes_buttons_#{post.id}", :class => "likebox"}
+              = render partial: 'likes/like', locals: { post: post}
+        -else
+          .like
+            %i.fas.fa-heart.unlike-btn
+            = post.likes.count
         .comment
           %i.far.fa-comments
           = post.comments.count

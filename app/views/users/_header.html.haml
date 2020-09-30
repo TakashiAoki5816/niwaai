@@ -2,30 +2,31 @@
   .userInfo
     -if @user.image.url.nil?
       .userInfo__image
-        = image_tag "pict/guest.jpg", size: "100x100"
+        = image_tag "pict/guest.jpg", size: "120x120"
     -else
       .userInfo__image
-        = image_tag @user.image.url, size: "100x100"
+        = image_tag @user.image.url, size: "120x120"
     .userInfo__name
       = @user.name
     .userInfo__email
       = @user.email
-  -if user_signed_in? && current_user.id == @user.id
-    .userInfo__edit
-      .editbtn
-        = link_to "編集", edit_user_registration_path(current_user)
-      .deletebtn
-        = link_to "削除"
-    = render partial: "relationships/follow_button"
+    -if user_signed_in? && current_user.id == @user.id
+      .userInfo__edit
+        .editbtn
+          = link_to "編集", edit_user_registration_path(current_user)
+        .deletebtn
+          = link_to "削除", user_registration_path(current_user), method: :delete, data: { confirm: 'アカウントを削除しますか？' }
+    -if user_signed_in?
+      = render partial: "relationships/follow_button"
   .user-detail
     .user-detail__posts
-      = link_to "投稿数", user_users_path(@user)
+      = link_to "投稿", user_users_path(@user)
       = @user.posts.count
     .user-detail__likes
       = link_to "いいねした投稿",likes_user_path(@user)
       = @user.likes.count
     .user-detail__following
-      = link_to "フォロー", user_following_path(@user)
+      = link_to "フォロー中", user_following_path(@user)
       = @user.followings.count
     .user-detail__follower
       = link_to "フォロワー", user_followers_path(@user)

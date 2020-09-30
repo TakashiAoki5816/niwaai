@@ -1,13 +1,13 @@
 .main {
-  margin-top: 15px;
   .Postsbox {
     width: 90%;
-    margin: 0 auto;
+    margin: 20px auto;
     height: auto;
-    border: 1px solid gray;
+    border: 10px solid rgb(150, 150, 150);
+    border-radius: 10px;
     &__header {
-      height: 50px;
-      margin-bottom: 5px;
+      height: 60px;
+      border-bottom: 1px solid gray;
       display: flex;
       justify-content: space-between;
       .left-header {
@@ -17,11 +17,19 @@
         .userimage {
         }
         .username {
+          font-size: 16px;
+          a {
+            color: #383838;
+            &:hover {
+              color: rgb(0, 132, 255);
+            }
+          }
         }
       }
       .right-header {
         display: flex;
         align-items: center;
+        font-size: 18px;
         .create-title {
         }
         .create-date {
@@ -41,24 +49,64 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        height: 50px;
-        width: 10%;
-        opacity: 0.8;
-        background-color: rgba(255,255,255,.8);
+        height: 70px;
+        width: auto;
+        background-color: rgba(255,255,255,.5);
         &__garden_name {
-          font-size: 25px;
+          font-size: 30px;
           color: #383838;
           float: right;
-          margin: 5px 5px 0 0;
+          margin: 15px auto;
         }
       }
     }
-    .edit {
-      float: right;
-      .editbtn {
+    &__about {
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      .like {
+        height: auto;
+        display: flex;
+        .likebox {
+          a {
+            font-size: 25px;
+            color: #383838
+          }
+          .like-btn {
+            height: auto;
+            font-size: 25px;
+            color: #808080;
+          }
+          .unlike-btn {
+            height: auto;
+            font-size: 25px;
+            color: #e54747;
+          }
+        }
+      }
+      .edit {
+        margin-top: 7px;
+        .editbtn {
+          margin-bottom: 18px;
+          a {
+            padding: 10px;
+            border: 1px solid #747474;
+            background-color: rgb(97, 157, 235);
+            color: #fff;
+          }
+        }
+        .deletebtn {
+          a {
+            padding: 10px;
+            border: 1px solid #747474;
+            background-color: rgb(255, 52, 52);
+            color: #fff;
+          }
+        }
       }
     }
     &__mainContent {
+      margin-bottom: 50px;
       .titlebox {
         height: auto;
         margin-top: 10px;
@@ -69,17 +117,11 @@
         }
       }
       .contentbox {
-        width: 80%;
+        width: 90%;
         height: auto;
         margin: 10px auto;
         .content {
         }
-      }
-      .like {
-        width: 80%;
-        height: 10px;
-        margin: 0 auto;
-        display: flex;
       }
     }
     .Comments {
@@ -93,10 +135,10 @@
       height: auto;
       .Commentbox {
         height: auto;
-        width: 80%;
-        border: 1px solid gray;
-        border-radius: 10px;
-        margin: 0 auto 10px auto;
+        width: 90%;
+        padding: 8px;
+        margin: 0 auto 20px auto;
+        border: 1px solid #cecece;
         .comment-header {
           height: 50px;
           display: flex;
@@ -108,6 +150,12 @@
             }
             .right {
               .username {
+                a {
+                  color: #383838;
+                }
+                a:hover {
+                  color: rgb(0, 132, 255);
+                }
               }
               .created_at {
               }
@@ -124,6 +172,9 @@
           &__destroy {
             .trash {
               color: #383838;
+              &:hover {
+                color: #415cf0
+              }
             }
           }
         }
@@ -131,7 +182,7 @@
     }
     .Comments-form {
       height: 100px;
-      width: 80%;
+      width: 90%;
       margin: 30px auto;
       .textbox {
         width: 100%;
@@ -148,22 +199,8 @@
     }
     #map {
       height: 600px;
-      width: 80%;
+      width: 90%;
       margin: 0 auto;
     }
-  }
-}
-
-.likebox {
-  .like-btn {
-    height: 30px;
-    font-size: 20px;
-    color: #808080;
-  }
-
-  .unlike-btn {
-    height: 30px;
-    font-size: 20px;
-    color: #e54747;
   }
 }

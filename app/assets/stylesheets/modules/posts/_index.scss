@@ -19,15 +19,16 @@
       height: auto;
       width: 350px;
       margin: 0 auto 50px auto;
-      border: 10px solid gray;
+      border: 10px solid rgb(158, 158, 158);
       border-radius: 10px;
       &__header {
         height: 50px;
         border-bottom: 1px solid gray;
         margin-top: 10px;
-        .title {
+        .garden-name {
           text-align: center;
           font-size: 23px;
+          color: #398a36;
         }
       }
       &__user {
@@ -39,7 +40,12 @@
           width: 50px;
         }
         .username {
-          padding-left: 10px;
+          a {
+            color: #383838;
+          }
+          a:hover {
+            color: rgb(0, 132, 255);
+          }
         }
       }
       &__titlebox {
@@ -48,7 +54,11 @@
         padding-top: 10px;
         .title {
           font-size: 25px;
+          font-weight: bold;
           text-align: center;
+          a {
+            color: #383838;
+          }
         }
       }
       &__imagebox {
@@ -70,17 +80,14 @@
         align-items: center;
         .like {
           padding-right: 5px;
+          a {
+            color: #383838;
+          }
           .likebox {
             .like-btn {
               height: 10px;
               font-size: 20px;
               color: #808080;
-            }
-
-            .unlike-btn {
-              height: 10px;
-              font-size: 20px;
-              color: #e54747;
             }
           }
         }
@@ -89,7 +96,15 @@
   }
 }
 
+// ページネーション
 .pagination {
   justify-content: center;
   margin-top: 30px;
+}
+
+
+.unlike-btn {
+  height: 10px;
+  font-size: 20px;
+  color: #e54747;
 }

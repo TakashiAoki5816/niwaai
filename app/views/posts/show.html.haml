@@ -4,28 +4,36 @@
       .left-header
         -if @post.user.image.url.nil?
           .user-image
-            = image_tag "pict/guest.jpg",size: "50x50"
+            = image_tag "pict/guest.jpg",size: "60x60"
         -else
           .userimage
-            = image_tag @post.user.image.url, size: "50x50"
+            = image_tag @post.user.image.url, size: "60x60"
         .username
-          = @post.user.name
+          = link_to @post.user.name, user_path(@post.user)
       .right-header
         .create-title
           投稿日：
         .create-date
           = @post.created_at.strftime("%Y年%m月%d日")
     .Postsbox__Imagebox
-      = image_tag @post.image.url, class: "image", size: "650x650"
+      = image_tag @post.image.url, class: "image", size: "750x750"
       .garden_namebox
         .garden_namebox__garden_name
           = @post.garden_name
-    -if user_signed_in? && current_user.id == @post.user_id
-      .edit
-        .editbtn
-          = link_to "編集", edit_post_path(@post.id)
-        .deletebtn
-          = link_to "削除", post_path(@post.id), method: :delete
+    .Postsbox__about
+      .like
+        -if user_signed_in?
+          %div{:id => "likes_buttons_#{@post.id}", :class => "likebox"}
+            = render partial: 'likes/like', locals: { post: @post}
+        - else
+          %i.fas.fa-heart.unlike-btn
+          = @post.likes.count
+      -if user_signed_in? && current_user.id == @post.user_id
+        .edit
+          .editbtn
+            = link_to "編集", edit_post_path(@post.id)
+          .deletebtn
+            = link_to "削除", post_path(@post.id), method: :delete, data: { confirm: '投稿を削除しますか？' }
     .Postsbox__mainContent
       .titlebox
         .title
@@ -33,9 +41,6 @@
       .contentbox
         .content
           = @post.content
-      .like
-        %div{:id => "likes_buttons_#{@post.id}", :class => "likebox"}
-          = render partial: 'likes/like', locals: { post: @post}
     .Comments コメント一覧
     .Postsbox__Commentsbox
       - @comments.each do |comment|
@@ -49,22 +54,27 @@
                 .user-image
                   = image_tag comment.user.image.url, size: "50x50"
               .right
-                .username
-                  = link_to comment.user.name, user_path(current_user)
+                -if user_signed_in?
+                  .username
+                    = link_to comment.user.name, user_path(comment.user)
+                -else
+                  .username
+                    = comment.user.name
                 .created-at
                   = comment.created_at.strftime("%Y年%m月%d日%R")
           .Contents
             .Contents__Comment
               = comment.content
-            .Contents__destroy
-              = link_to post_comment_path(@post, comment), method: :delete do
-                %i.fas.fa-trash.trash
-      -if user_signed_in?
-        .Comments-form
-          = form_with(model: [@post, @comment], local: true, id: "new_comment") do |f|
-            = f.text_area :content, class: 'textbox'
-            %br
-            = f.submit 'コメントする', class: 'form__submit'
+            - if user_signed_in? && current_user.id == comment.user.id
+              .Contents__destroy
+                = link_to post_comment_path(@post, comment), method: :delete do
+                  %i.fas.fa-trash.trash
+    -if user_signed_in?
+      .Comments-form
+        = form_with(model: [@post, @comment], local: true, id: "new_comment") do |f|
+          = f.text_area :content, class: 'textbox'
+          %br
+          = f.submit 'コメントする', class: 'form__submit'
     - if @post.address.present?
       %p.address Map
       = succeed "(\u5730\u56F3\u3092\u8868\u793A)" do
