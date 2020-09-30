@@ -1,6 +1,6 @@
 .wrapper {
   background-color: #ffffff;
-  // アプリ紹介
+  // スライドショー
   .mainimage {
     height: 880px;
     overflow: hidden;
@@ -16,8 +16,8 @@
       position: absolute;
       left: 0;
       top: 0;
-      -webkit-animation: anime 36s 0s infinite;
-      animation: anime 36s 0s infinite;
+      -webkit-animation: anime 30s 0s infinite;
+      animation: anime 30s 0s infinite;
     }
     .main_img:nth-of-type(2) {
       -webkit-animation-delay: 6s;
@@ -39,33 +39,42 @@
     text-align: center;
     margin: 80px auto;
     .App-name {
-      color: #398a36;
       margin-bottom: 70px;
+      h2 {
+        color: #398a36;
+      }
     }
     .introduce {
       margin-top: 10px;
       p {
-        font-size: 18px;
+        font-size: 20px;
+        margin-bottom: 15px;
       }
     }
   }
+  // アプリ紹介
   .mainInfo {
-    height: 500px;
+    height: 480px;
     display: flex;
-    margin: 0 auto 20px auto;
-    border: 1px solid #383838;
-    background-color: rgb(240, 240, 240);
+    margin: 0 auto;
+    border: 1px solid #cecece;
     &__left {
       width: 40%;
       .left-title {
         width: 70%;
-        margin: 30px auto 50px auto;
+        margin: 30px auto 80px auto;
+        span {
+          border-bottom: 6px solid rgb(102, 192, 107);
+        }
       }
       .content {
         width: 70%;
         margin: 0 auto;
         p {
           font-size: 18px;
+        }
+        span {
+          border-bottom: 4px solid rgb(102, 192, 107);
         }
       }
     }
@@ -77,10 +86,10 @@
     }
   }
   .mainGoogle {
-    height: 500px;
-    border: 1px solid #383838;
+    height: 480px;
+    border: 1px solid #f0f0f0;
     display: flex;
-    margin: 0 auto 20px auto;
+    margin: 0 auto;
     &__left {
       width: 60%;
       background-image: url(pict/googlemap.png);
@@ -89,10 +98,12 @@
     }
     &__right {
       width: 40%;
-      background-color: rgb(240, 240, 240);
       .right-title {
         width: 70%;
-        margin: 30px auto 50px auto;
+        margin: 30px auto 80px auto;
+        span {
+          border-bottom: 6px solid rgb(102, 192, 107);
+        }
       }
       .content {
         width: 70%;
@@ -104,17 +115,19 @@
     }
   }
   .mainPosts {
-    height: 500px;
+    height: 480px;
     margin: 0 auto 20px auto;
-    border: 1px solid #383838;
+    border: 1px solid #f0f0f0;
     display: flex;
     margin: 0 auto 0 auto;
     &__left {
       width: 40%;
-      background-color: rgb(240, 240, 240);
       .left-title {
         width: 70%;
-        margin: 30px auto 50px auto;
+        margin: 30px auto 80px auto;
+        span {
+          border-bottom: 6px solid rgb(102, 192, 107);
+        }
       }
       .content {
         width: 70%;
@@ -126,7 +139,7 @@
     }
     &__right {
       width: 60%;
-      background-image: url(pict/hasyokan.jpg);
+      background-image: url(pict/kiyosumi3.jpg);
       background-size:cover;
       background-position: center center;
     }
