@@ -51,16 +51,13 @@
     align-items: center;
     justify-content: space-around;
     margin: 0 auto;
-    border: 5px solid gray;
-    font-weight: normal;
+    border: 5px solid #acacac;
     font-size: 18px;
-    &__posts {
+    a {
+      color: #383838;
     }
-    &__likes {
-    }
-    &__following {
-    }
-    &__follower {
+    a:hover {
+      color: rgb(0, 132, 255);
     }
   }
 }
