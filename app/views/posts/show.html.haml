@@ -27,7 +27,8 @@
             = render partial: 'likes/like', locals: { post: @post}
         - else
           %i.fas.fa-heart.unlike-btn
-          = @post.likes.count
+          .likecount
+            = @post.likes.count
       -if user_signed_in? && current_user.id == @post.user_id
         .edit
           .editbtn
@@ -59,7 +60,7 @@
                     = link_to comment.user.name, user_path(comment.user)
                 -else
                   .username
-                    = comment.user.name
+                    = link_to comment.user.name, user_path(comment.user)
                 .created-at
                   = comment.created_at.strftime("%Y年%m月%d日%R")
           .Contents
@@ -75,8 +76,11 @@
           = f.text_area :content, class: 'textbox'
           %br
           = f.submit 'コメントする', class: 'form__submit'
+    -else
+      .text コメントをするには新規登録/ログインが必要です
     - if @post.address.present?
-      %p.address Map
+      %p.address
+        = @post.garden_name
       = succeed "(\u5730\u56F3\u3092\u8868\u793A)" do
         #map
       :javascript
