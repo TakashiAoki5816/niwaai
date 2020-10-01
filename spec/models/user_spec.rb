@@ -47,6 +47,35 @@ describe User do
       expect(user).to be_valid
     end
   end
+  #length
+  describe '#create' do
+    it "nameが11文字だと登録できないこと" do
+      user = build(:user, name: "あああああああああああ")
+      user.valid?
+      expect(user.errors[:name]).to include("は10文字以内で入力してください")
+    end
+  end
 
+  describe '#create' do
+    it "nameが10文字だと登録できること" do
+      user = build(:user, name: "ああああああああああ")
+      expect(user).to be_valid
+    end
+  end
+
+  describe '#create' do
+    it "passwordが6文字だと登録できないこと" do
+      user = build(:user, password: "000000")
+      user.valid?
+      expect(user.errors[:password]).to include("は7文字以上で入力してください")
+    end
+  end
+
+  describe '#create' do
+    it "passwordが7文字だと登録できること" do
+      user = build(:user, password: "0000000", password_confirmation: "0000000")
+      expect(user).to be_valid
+    end
+  end
 
 end
