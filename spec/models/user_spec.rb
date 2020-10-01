@@ -2,13 +2,13 @@ require 'rails_helper'
 
 describe User do
   describe '#create' do
-    it "全てのカラムが存在する時にユーザー登録ができること" do
+    it "ユーザー登録ができること" do
       user = build(:user)
       expect(user).to be_valid
     end
   end
 
-  # presence: trueのバリデーションチェック
+  # presence: trueのバリデーション
   describe '#create' do
     it "nameが空では登録できないこと" do
       user = build(:user, name: "")
@@ -49,7 +49,7 @@ describe User do
     end
   end
 
-  # lengthのバリデーションチェック
+  # lengthのバリデーション
   describe '#create' do
     it "nameが11文字だと登録できないこと" do
       user = build(:user, name: "あああああああああああ")
@@ -80,7 +80,7 @@ describe User do
     end
   end
 
-  # uniqueness: trueのバリデーションチェック
+  # uniqueness: trueのバリデーション
   describe '#create' do
     it "nameが同じだと登録できないこと" do
       user = create(:user)
