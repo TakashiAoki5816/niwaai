@@ -7,7 +7,8 @@ describe User do
       expect(user).to be_valid
     end
   end
-  #presence: trueになっているか
+
+  # presence: trueのバリデーションチェック
   describe '#create' do
     it "nameが空では登録できないこと" do
       user = build(:user, name: "")
@@ -40,14 +41,15 @@ describe User do
     end
   end
 
-  #空でも登録できること
+  # 空でも登録できること
   describe '#create' do
     it "imageが空でも登録できること" do
       user = build(:user, image: "")
       expect(user).to be_valid
     end
   end
-  #length
+
+  # lengthのバリデーションチェック
   describe '#create' do
     it "nameが11文字だと登録できないこと" do
       user = build(:user, name: "あああああああああああ")
@@ -78,4 +80,22 @@ describe User do
     end
   end
 
+  # uniqueness: trueのバリデーションチェック
+  describe '#create' do
+    it "nameが同じだと登録できないこと" do
+      user = create(:user)
+      another_user = build(:user, name: user.name)
+      another_user.valid?
+      expect(another_user.errors[:name]).to include("はすでに存在します")
+    end
+  end
+
+  describe '#create' do
+    it "emailが同じだと登録できないこと" do
+      user = create(:user)
+      another_user = build(:user, email: user.email)
+      another_user.valid?
+      expect(another_user.errors[:email]).to include("はすでに存在します")
+    end
+  end
 end
