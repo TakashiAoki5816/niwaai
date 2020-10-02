@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(comment){
     if ( comment.user_name == 'ゲスト' ) {
-      let html = `<div class="Commentbox">
+      let html = `<div class="Commentbox" id="comment-${comment.id}">
                     <div class="comment-header">
                       <div class="left">
                         <div class="userimage">
@@ -22,7 +22,7 @@ $(function(){
                         ${comment.content}
                       </div>
                       <div class="Contents__destroy">
-                        <a rel="nofollow" data-method="delete" href="/posts/${comment.post}/comments/${comment.id}">
+                        <a data-remote="true" rel="nofollow" data-method="delete" href="/posts/${comment.post}/comments/${comment.id}">
                           <i class="fas fa-trash trash"></i>
                         </a>
                       </div>
@@ -30,7 +30,7 @@ $(function(){
                   </div>`
       return html;
     } else {
-      let html =　`<div class="Commentbox">
+      let html =　`<div class="Commentbox" id="comment-${comment.id}">
                     <div class="comment-header">
                       <div class="left">
                         <div class="userimage">
@@ -51,7 +51,7 @@ $(function(){
                         ${comment.content}
                       </div>
                       <div class="Contents__destroy">
-                        <a rel="nofollow" data-method="delete" href="/posts/${comment.post}/comments/${comment.id}">
+                        <a data-remote="true" rel="nofollow" data-method="delete" href="/posts/${comment.post}/comments/${comment.id}">
                           <i class="fas fa-trash trash"></i>
                         </a>
                       </div>

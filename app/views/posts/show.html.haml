@@ -43,12 +43,13 @@
         .content
           = @post.content
     .Comments コメント一覧
-    = render partial: 'comments/comment_area'
+    .Postsbox__Commentsbox
+      = render partial: 'comments/comment', locals: { comments: @comments }
     -if user_signed_in?
       = render partial: 'comments/comment_form'
     -else
       .text ※コメントをするには新規登録/ログインが必要です
-    - if @post.address.present?
+    - unless @post.address.nil?
       #map
       :javascript
         function initMap() {
