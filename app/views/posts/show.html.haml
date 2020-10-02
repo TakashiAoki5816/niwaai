@@ -45,7 +45,7 @@
     .Comments コメント一覧
     .Postsbox__Commentsbox
       - @comments.each do |comment|
-        .Commentbox
+        %div{:id => "comment-#{comment.id}", :class => "Commentbox"}
           .comment-header
             .left
               -if comment.user.image.url.nil?
@@ -71,11 +71,7 @@
                 = link_to post_comment_path(@post, comment), method: :delete do
                   %i.fas.fa-trash.trash
     -if user_signed_in?
-      .Comments-form
-        = form_with(model: [@post, @comment], local: true, id: "new_comment") do |f|
-          = f.text_area :content, class: 'textbox'
-          %br
-          = f.submit 'コメントする', class: 'form__submit'
+      = render partial: 'comments/comment_form'
     -else
       .text ※コメントをするには新規登録/ログインが必要です
     - if @post.address.present?

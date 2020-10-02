@@ -1,0 +1,5 @@
+.Comments-form
+  = form_with(model: [@post, @comment], local: true, id: "new_comment") do |f|
+    = f.text_area :content, class: 'textbox'
+    %br
+    = f.submit 'コメントする', class: 'form__submit'
