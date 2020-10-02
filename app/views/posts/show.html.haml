@@ -43,33 +43,7 @@
         .content
           = @post.content
     .Comments コメント一覧
-    .Postsbox__Commentsbox
-      - @comments.each do |comment|
-        %div{:id => "comment-#{comment.id}", :class => "Commentbox"}
-          .comment-header
-            .left
-              -if comment.user.image.url.nil?
-                .user-image
-                  = image_tag "pict/guest.jpg",size: "50x50"
-              -else
-                .user-image
-                  = image_tag comment.user.image.url, size: "50x50"
-              .right
-                -if user_signed_in?
-                  .username
-                    = link_to comment.user.name, user_path(comment.user)
-                -else
-                  .username
-                    = link_to comment.user.name, user_path(comment.user)
-                .created-at
-                  = comment.created_at.strftime("%Y年%m月%d日%R")
-          .Contents
-            .Contents__Comment
-              = comment.content
-            - if user_signed_in? && current_user.id == comment.user.id
-              .Contents__destroy
-                = link_to post_comment_path(@post, comment), method: :delete do
-                  %i.fas.fa-trash.trash
+    = render partial: 'comments/comment_area'
     -if user_signed_in?
       = render partial: 'comments/comment_form'
     -else
