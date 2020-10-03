@@ -8,21 +8,27 @@
         = f.submit "検索", class: "search-btn"
   - if user_signed_in?
     %ul.header__right
-      %li.new-post
-        %i.fas.fa-edit.icon
-        = link_to "新規投稿", new_post_path
-      %li.posts
-        %i.fas.fa-th-list.icon
-        = link_to "投稿一覧", posts_path
+      %li
+        = link_to new_post_path, class: "new-post" do
+          %i.fas.fa-edit.icon
+          新規登録
+      %li
+        = link_to posts_path, class: "posts" do
+          %i.fas.fa-th-list.icon
+          投稿一覧
       %li.users
-        %i.fas.fa-users.icon
-        = link_to "ユーザー一覧", users_path
-      %li.mypage
-        %i.fa.fa-user.icon
-        = link_to "マイページ", user_path(current_user)
-      %li.logout
-        %i.fas.fa-sign-out-alt.icon
-        = link_to "ログアウト", destroy_user_session_path, method: :delete
+        = link_to users_path, class: "users" do
+          %i.fas.fa-users.icon
+          ユーザー一覧
+      %li
+        = link_to user_path(current_user), class: "mypage" do
+          %i.fa.fa-user.icon
+          マイページ
+      %li
+        = link_to destroy_user_session_path, method: :delete, class: "logout" do
+          %i.fas.fa-sign-out-alt.icon
+          ログアウト
+
   - else
     %ul.header__right
       %li.posts
