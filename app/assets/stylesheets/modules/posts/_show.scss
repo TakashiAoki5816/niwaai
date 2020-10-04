@@ -64,10 +64,11 @@
       height: auto;
       display: flex;
       justify-content: space-between;
+      width: 100%;
       .like-comment {
         display: flex;
-        height: 50px;
         width: 100%;
+        height: 50px;
         margin: 0 auto;
         align-items: center;
         .like {
@@ -109,26 +110,6 @@
         .comment {
           padding-top: 1px;
           font-size: 24px;
-        }
-      }
-      .edit {
-        margin-top: 7px;
-        .editbtn {
-          margin-bottom: 18px;
-          a {
-            padding: 10px;
-            border: 1px solid #747474;
-            background-color: rgb(97, 157, 235);
-            color: #fff;
-          }
-        }
-        .deletebtn {
-          a {
-            padding: 10px;
-            border: 1px solid #747474;
-            background-color: rgb(255, 52, 52);
-            color: #fff;
-          }
         }
       }
     }
@@ -234,6 +215,32 @@
       height: 700px;
       width: 90%;
       margin: 0 auto 20px auto;
+    }
+  }
+}
+
+
+.edit {
+  width: 100%;
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+  .editbtn {
+    margin-bottom: 18px;
+    padding-right: 1px;
+    a {
+      padding: 10px;
+      border: 1px solid #747474;
+      background-color: rgb(97, 157, 235);
+      color: #fff;
+    }
+  }
+  .deletebtn {
+    a {
+      padding: 10px;
+      border: 1px solid #747474;
+      background-color: rgb(255, 52, 52);
+      color: #fff;
     }
   }
 }
