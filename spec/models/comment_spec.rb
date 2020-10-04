@@ -8,7 +8,7 @@ describe Comment do
   end
 
   describe '#create' do
-    it 'コメントの作成ができる' do
+    it 'コメントが作成できること' do
       expect(@comment).to be_valid
     end
     it "contentが空では投稿できないこと" do

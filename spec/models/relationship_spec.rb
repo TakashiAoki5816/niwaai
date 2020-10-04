@@ -7,9 +7,7 @@ describe Relationship do
       relationship.valid?
       expect(relationship.errors[:user_id]).to include("を入力してください")
     end
-  end
 
-  describe '#create' do
     it "follow_idが空ではフォローできないこと" do
       relationship = build(:relationship, follow_id: "")
       relationship.valid?

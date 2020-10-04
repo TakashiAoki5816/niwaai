@@ -8,32 +8,25 @@ describe User do
     end
   end
 
-  # presence: trueのバリデーション
-  describe '#create' do
+  describe 'valid presence: true' do
     it "nameが空では登録できないこと" do
       user = build(:user, name: "")
       user.valid?
       expect(user.errors[:name]).to include("を入力してください")
     end
-  end
 
-  describe '#create' do
     it "emailが空では登録できないこと" do
       user = build(:user, email: "")
       user.valid?
       expect(user.errors[:email]).to include("を入力してください")
     end
-  end
 
-  describe '#create' do
     it "passwordが空では登録できないこと" do
       user = build(:user, password: "")
       user.valid?
       expect(user.errors[:password]).to include("を入力してください")
     end
-  end
 
-  describe '#create' do
     it "password_confirmationが空では登録できないこと" do
       user = build(:user, password_confirmation: "")
       user.valid?
@@ -49,48 +42,40 @@ describe User do
     end
   end
 
-  # lengthのバリデーション
-  describe '#create' do
+  describe 'name length' do
     it "nameが11文字だと登録できないこと" do
       user = build(:user, name: "あああああああああああ")
       user.valid?
       expect(user.errors[:name]).to include("は10文字以内で入力してください")
     end
-  end
 
-  describe '#create' do
     it "nameが10文字だと登録できること" do
       user = build(:user, name: "ああああああああああ")
       expect(user).to be_valid
     end
   end
 
-  describe '#create' do
+  describe 'password length' do
     it "passwordが6文字だと登録できないこと" do
       user = build(:user, password: "000000")
       user.valid?
       expect(user.errors[:password]).to include("は7文字以上で入力してください")
     end
-  end
 
-  describe '#create' do
     it "passwordが7文字だと登録できること" do
       user = build(:user, password: "0000000", password_confirmation: "0000000")
       expect(user).to be_valid
     end
   end
 
-  # uniqueness: trueのバリデーション
-  describe '#create' do
+  describe 'valid uniqueness: true' do
     it "nameが同じだと登録できないこと" do
       user = create(:user)
       another_user = build(:user, name: user.name)
       another_user.valid?
       expect(another_user.errors[:name]).to include("はすでに存在します")
     end
-  end
 
-  describe '#create' do
     it "emailが同じだと登録できないこと" do
       user = create(:user)
       another_user = build(:user, email: user.email)
@@ -98,4 +83,5 @@ describe User do
       expect(another_user.errors[:email]).to include("はすでに存在します")
     end
   end
+
 end
