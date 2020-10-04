@@ -64,32 +64,51 @@
       height: auto;
       display: flex;
       justify-content: space-between;
-      .like {
-        height: auto;
+      .like-comment {
         display: flex;
-        .unlike-btn {
+        height: 50px;
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+        .like {
           height: auto;
-          font-size: 25px;
-          color: #e54747;
-        }
-        .likecount {
-          font-size: 20px;
-        }
-        .likebox {
-          a {
-            font-size: 25px;
-            color: #383838
-          }
-          .like-btn {
-            height: auto;
-            font-size: 25px;
-            color: #808080;
-          }
+          display: flex;
+          padding-right: 5px;
           .unlike-btn {
             height: auto;
             font-size: 25px;
             color: #e54747;
           }
+          .likes-btn {
+            margin-top: 7px;
+            height: auto;
+            font-size: 25px;
+            color: #e54747;
+          }
+          .likecount {
+            margin-top: 2px;
+            font-size: 24px;
+          }
+          .likebox {
+            a {
+              font-size: 25px;
+              color: #212529;
+            }
+            .like-btn {
+              height: auto;
+              font-size: 25px;
+              color: #808080;
+            }
+            .unlike-btn {
+              height: auto;
+              font-size: 25px;
+              color: #e54747;
+            }
+          }
+        }
+        .comment {
+          padding-top: 1px;
+          font-size: 24px;
         }
       }
       .edit {

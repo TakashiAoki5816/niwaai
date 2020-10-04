@@ -21,14 +21,18 @@
         .garden_namebox__garden_name
           = @post.garden_name
     .Postsbox__about
-      .like
-        -if user_signed_in?
-          %div{:id => "likes_buttons_#{@post.id}", :class => "likebox"}
-            = render partial: 'likes/like', locals: { post: @post}
-        - else
-          %i.fas.fa-heart.unlike-btn
-          .likecount
-            = @post.likes.count
+      .like-comment
+        .like
+          -if user_signed_in?
+            %div{:id => "likes_buttons_#{@post.id}", :class => "likebox"}
+              = render partial: 'likes/like', locals: { post: @post}
+          - else
+            %i.fas.fa-heart.likes-btn
+            .likecount
+              = @post.likes.count
+        .comment
+          %i.far.fa-comments
+          = @post.comments.count
       -if user_signed_in? && current_user.id == @post.user_id
         .edit
           .editbtn
