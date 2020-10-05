@@ -16,14 +16,14 @@
         = f.label :title, 'タイトル'
         %span.badge.badge-danger
           必須
-        = f.text_field :title, class: 'form-control', placeholder: '例： 枯山水'
+        = f.text_field :title, class: 'form-control'
       .form-group.col-md-8
         = f.label :image, '画像'
         %span.badge.badge-danger
           必須
         = f.file_field :image, class: 'form-control'
       .form-group.col-md-8
-        = f.label :content, "説明文"
+        = f.label :content, "説明"
         %span.badge.badge-success
           任意
         = f.text_area :content, class: 'form-control'

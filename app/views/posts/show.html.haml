@@ -21,13 +21,18 @@
         .garden_namebox__garden_name
           = @post.garden_name
     .Postsbox__about
-      .like
-        -if user_signed_in?
-          %div{:id => "likes_buttons_#{@post.id}", :class => "likebox"}
-            = render partial: 'likes/like', locals: { post: @post}
-        - else
-          %i.fas.fa-heart.unlike-btn
-          = @post.likes.count
+      .like-comment
+        .like
+          -if user_signed_in?
+            %div{:id => "likes_buttons_#{@post.id}", :class => "likebox"}
+              = render partial: 'likes/like', locals: { post: @post}
+          - else
+            %i.fas.fa-heart.likes-btn
+            .likecount
+              = @post.likes.count
+        .comment
+          %i.far.fa-comments
+          = @post.comments.count
       -if user_signed_in? && current_user.id == @post.user_id
         .edit
           .editbtn
@@ -43,42 +48,13 @@
           = @post.content
     .Comments コメント一覧
     .Postsbox__Commentsbox
-      - @comments.each do |comment|
-        .Commentbox
-          .comment-header
-            .left
-              -if comment.user.image.url.nil?
-                .user-image
-                  = image_tag "pict/guest.jpg",size: "50x50"
-              -else
-                .user-image
-                  = image_tag comment.user.image.url, size: "50x50"
-              .right
-                -if user_signed_in?
-                  .username
-                    = link_to comment.user.name, user_path(comment.user)
-                -else
-                  .username
-                    = comment.user.name
-                .created-at
-                  = comment.created_at.strftime("%Y年%m月%d日%R")
-          .Contents
-            .Contents__Comment
-              = comment.content
-            - if user_signed_in? && current_user.id == comment.user.id
-              .Contents__destroy
-                = link_to post_comment_path(@post, comment), method: :delete do
-                  %i.fas.fa-trash.trash
+      = render partial: 'comments/comment', locals: { comments: @comments }
     -if user_signed_in?
-      .Comments-form
-        = form_with(model: [@post, @comment], local: true, id: "new_comment") do |f|
-          = f.text_area :content, class: 'textbox'
-          %br
-          = f.submit 'コメントする', class: 'form__submit'
-    - if @post.address.present?
-      %p.address Map
-      = succeed "(\u5730\u56F3\u3092\u8868\u793A)" do
-        #map
+      = render partial: 'comments/comment_form'
+    -else
+      .text ※コメントをするには新規登録/ログインが必要です
+    - unless @post.address.nil?
+      #map
       :javascript
         function initMap() {
 
@@ -94,12 +70,11 @@
             var infowindow = new google.maps.InfoWindow({
                 content: contentString
             });
-
             var marker = new google.maps.Marker({
-                position:test,
-                map: map,
-                title: contentString
-            });
+                          position:test,
+                          map: map,
+                          title: contentString
+                         });
 
             marker.addListener('click', function() {
                 infowindow.open(map, marker);
