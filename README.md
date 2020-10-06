@@ -34,6 +34,7 @@ https://www.niwaai.com
 ### テスト
   - Rspec
     - 単体テスト
+    - システムテスト（capybara）
 ### その他使用技術
   - Google API(Maps JavaScript API、Geocoding API)
   - 非同期通信(いいね・コメント・フォロー)
