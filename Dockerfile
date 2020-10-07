@@ -4,7 +4,6 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && apt-get update -qq \
     && apt-get install -y nodejs yarn
 RUN mkdir /niwaai
-ADD https://noto-website.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip /noto
 WORKDIR /niwaai
 COPY Gemfile /niwaai/Gemfile
 COPY Gemfile.lock /niwaai/Gemfile.lock
