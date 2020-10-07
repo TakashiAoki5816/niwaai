@@ -1,6 +1,6 @@
 ![niwaai-logo](https://user-images.githubusercontent.com/56289802/94241696-ebb18380-ff4f-11ea-86f6-fbcc9a4f2ba4.png)
 # Niwaai（にわあい）
-トップページ画像
+![スクリーンショット 2020-10-07 17 41 19](https://user-images.githubusercontent.com/56289802/95308106-6b324180-08c4-11eb-9f44-1a44559dd5f3.png)
 ## 概要
 あなたのお気に入りの日本庭園に出会おうをコンセプトにした庭園写真共有サイトです。
 ## URL
