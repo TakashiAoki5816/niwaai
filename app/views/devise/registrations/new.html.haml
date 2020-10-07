@@ -8,14 +8,10 @@
             = render "devise/shared/error_messages", resource: resource
             .form-group
               = f.label :名前
-              %span.badge.badge-danger
-                必須
               %br/
               = f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control"
             .form-group
-              = f.label :email
-              %span.badge.badge-danger
-                必須
+              = f.label :メールアドレス
               %br/
               = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control"
             .form-group
@@ -26,17 +22,13 @@
               = f.file_field :image, autofocus: true, autocomplete: "image", class: "form-control", alt: "pict/guest.jpg"
             .form-group
               = f.label :password
-              %span.badge.badge-danger
-                必須
               (7文字以上)
               %br/
               = f.password_field :password, autocomplete: "new-password", class: "form-control"
             .form-group
               = f.label :password_confirmation
-              %span.badge.badge-danger
-                必須
               %br/
               = f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control"
             .form-group
-              = f.submit "新規登録", class: 'btn btn-primary btn-block'
+              = f.submit class: 'btn btn-primary btn-block', value: '新規登録'
           = render "devise/shared/links"
