@@ -55,7 +55,7 @@ https://www.niwaai.com
 - テスト(RSpec)
 - テストデータ投入(faker)
 ## クラウドアーキテクチャ
-![niwaai](https://user-images.githubusercontent.com/56289802/94265657-dfd7b880-ff73-11ea-951e-76f576c33d35.jpg)
+![niwaai (1)](https://user-images.githubusercontent.com/56289802/95600491-332a2a80-0a8d-11eb-97b1-5eb47099b8bd.jpg)
 ## 特に力を入れた点
 ### 1.UIを意識したデザイン
 本アプリを開発する前にアプリのコンセプトやターゲット層をしっかり定めてから開発に入りました。<br>
@@ -79,6 +79,6 @@ Google APIのPlaces APIを利用すると上記の機能が実装できそうな
 - レスポンシブ対応
 ## About Me
 現在22歳で今年3月に大学を卒業しました。<br>
-6/8~8/17までスクールに通っていました。<br>
+6/8から8/17までテックキャンプに通っていました。<br>
 8/17~ ポートフォリオの制作に取り掛かっており、<br>
 Twitterでポートフォリオの制作過程を呟いています。([Twitter](https://twitter.com/arfaben__5816))
