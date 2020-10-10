@@ -8,7 +8,7 @@
       .Contents-box__user
         -if post.user.image.url.nil?
           .user-image
-            = image_tag "pict/guest.jpg",size: "50x50"
+            = image_tag "guest.jpg",size: "50x50"
         -else
           .userimage
             = image_tag post.user.image.url, size: "50x50"
