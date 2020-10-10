@@ -4,7 +4,7 @@
       .left
         -if user.image.url.nil?
           .user-image
-            = image_tag "guest.jpg",size: "100x100"
+            = image_tag "pict/guest.jpg",size: "100x100"
         -else
           .user-image
             = image_tag user.image.url, size: "100x100"

@@ -2,7 +2,7 @@
   .userInfo
     -if @user.image.url.nil?
       .userInfo__image
-        = image_tag "guest.jpg", size: "120x120"
+        = image_tag "pict/guest.jpg", size: "120x120"
     -else
       .userInfo__image
         = image_tag @user.image.url, size: "120x120"
