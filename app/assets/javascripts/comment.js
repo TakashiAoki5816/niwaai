@@ -1,11 +1,10 @@
 $(function(){
   function buildHTML(comment){
-    if ( comment.user_name == 'ゲスト' ) {
+    if ( comment.user_email == 'guest@example.com' ) {
       let html = `<div class="Commentbox" id="comment-${comment.id}">
                     <div class="comment-header">
                       <div class="left">
-                        <div class="userimage">
-                          <img src="/assets/pict/guest.jpg" width="50" height="50">
+                        <div class="user-image">
                         </div>
                         <div class="right">
                           <div class="username">
