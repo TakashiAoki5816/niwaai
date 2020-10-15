@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @users = User.all.page(params[:page]).per(8)
   end
 
   def show
@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   def likes
     @user = User.find(params[:id])
-    @likes = @user.likes.page(params[:page]).per(2)
+    @likes = @user.likes.page(params[:page]).per(6)
   end
 
   def following
