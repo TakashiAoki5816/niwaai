@@ -4,10 +4,10 @@
       .left-header
         -if @post.user.image.url.nil?
           .userimage
-            = image_tag "pict/guest.jpg",size: "50x50"
+            = image_tag "pict/guest.jpg",size: "60x60"
         -else
           .userimage
-            = image_tag @post.user.image.url, size: "50x50"
+            = image_tag @post.user.image.url, size: "60x60"
         .username
           = link_to @post.user.name, user_path(@post.user)
       .right-header

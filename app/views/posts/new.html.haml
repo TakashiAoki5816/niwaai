@@ -3,7 +3,7 @@
     = form_with model: @post, local: true do |f|
       %h2.Post-heading 新規投稿
       .form-group.col-md-8
-        = f.label :garden_name, '庭園名'
+        = f.label :garden_name, '庭園・公園名'
         %span.badge.badge-danger
           必須
         = f.text_field :garden_name, class: 'form-control', placeholder: '例： 清澄庭園'

@@ -1,17 +1,18 @@
 .users-info
   - @users.each do |user|
-    .userbox
-      .left
-        -if user.image.url.nil?
-          .userimage
-            = image_tag "pict/guest.jpg",size: "100x100"
-        -else
-          .userimage
-            = image_tag user.image.url, size: "100x100"
-      .right
-        .user-name
-          = link_to user.name, user_path(user)
-        .user-following
-          = "フォロー#{user.followings.count}"
-        .user-follower
-          = "フォロワー#{user.followers.count}"
+    = link_to user_path(user) do
+      .userbox
+        .left
+          -if user.image.url.nil?
+            .userimage
+              = image_tag "pict/guest.jpg",size: "100x100"
+          -else
+            .userimage
+              = image_tag user.image.url, size: "100x100"
+        .right
+          .user-name
+            = user.name
+          .user-following
+            = "フォロー#{user.followings.count}"
+          .user-follower
+            = "フォロワー#{user.followers.count}"

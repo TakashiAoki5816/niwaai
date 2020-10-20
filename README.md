@@ -47,7 +47,7 @@ https://www.niwaai.com
 - いいね、コメント、フォロー機能(Ajax)
 - Googlemap表示(Google Maps JavaScript API)
 - 住所から緯度経度変換(Geocoding API)
-- スライドショー(CSS)
+- スライドショー(Scss)
 - 検索機能
 - ページネーション機能(kaminari)
 - 簡単ログイン機能
@@ -78,5 +78,4 @@ Google APIのPlaces APIを利用すると上記の機能が実装できそうな
 ## About Me
 現在22歳で今年3月に大学を卒業しました。<br>
 6/8〜8/17までテックキャンプに通っていました。<br>
-8/17〜 ポートフォリオの制作に取り掛かっており、<br>
-Twitterでポートフォリオの制作過程を呟いています。([Twitter](https://twitter.com/arfaben__5816))
+8/17〜 ポートフォリオの制作に取り掛かっており、Twitterでポートフォリオの制作過程を呟いています。([Twitter](https://twitter.com/arfaben__5816))
