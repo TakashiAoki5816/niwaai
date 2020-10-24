@@ -5,6 +5,7 @@
   border-bottom: 1px solid #cecece;
   display: flex;
   justify-content: space-between;
+  font-family: "M PLUS Rounded 1c";
   &__left {
     display: flex;
     .logo {
@@ -27,7 +28,6 @@
     }
     a {
       color: #398a36;
-      font-family: "M PLUS Rounded 1c";
     }
     li a:hover {
       color: #46dd53;
