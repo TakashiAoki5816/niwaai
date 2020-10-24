@@ -124,7 +124,7 @@
   .mainPosts {
     height: 480px;
     margin: 0 auto 20px auto;
-    border: 1px solid #f0f0f0;
+    border-top: 1px solid #f0f0f0;
     display: flex;
     margin: 0 auto 0 auto;
     &__left {
@@ -134,6 +134,7 @@
         margin: 30px auto 80px auto;
         span {
           border-bottom: 6px solid rgb(102, 192, 107);
+          font-family: "M PLUS Rounded 1c";
         }
       }
       .content {

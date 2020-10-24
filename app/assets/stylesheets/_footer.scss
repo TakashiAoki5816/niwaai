@@ -4,6 +4,10 @@
   border-top: 1px solid #cecece;
   align-items: center;
   justify-content: center;
+  background: -moz-linear-gradient(top, #59cf55, #FFF);
+  background: -webkit-linear-gradient(top, #59cf55, #FFF);
+  background: linear-gradient(to bottom, #59cf55, #FFF);
   .copyright {
+    font-family: "M PLUS Rounded 1c";
   }
 }
