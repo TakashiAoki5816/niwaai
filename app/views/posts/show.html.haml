@@ -53,7 +53,7 @@
       = render partial: 'comments/comment_form'
     -else
       .text ※コメントをするには新規登録/ログインが必要です
-    - unless @post.address.nil?
+    -if @post.address.present?
       #map
       :javascript
         function initMap() {
