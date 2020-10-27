@@ -124,7 +124,7 @@
   .mainPosts {
     height: 480px;
     margin: 0 auto 20px auto;
-    border-top: 1px solid #f0f0f0;
+    border: 1px solid #f0f0f0;
     display: flex;
     margin: 0 auto 0 auto;
     &__left {
@@ -178,6 +178,12 @@
 
 @media (max-width: 480px) {
   .wrapper {
+    .mainimage {
+      height: 400px;
+      .main_img {
+        height: 400px;
+      }
+    }
     .mainInfo {
       display: flex;
       flex-direction: column-reverse;
