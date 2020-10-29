@@ -20,14 +20,18 @@
       = render partial: "relationships/follow_button"
   .user-detail
     .user-detail__posts
-      = link_to "投稿", user_users_path(@user)
-      = @user.posts.count
+      = link_to user_users_path(@user) do
+        投稿
+        = @user.posts.count
     .user-detail__likes
-      = link_to "いいねした投稿",likes_user_path(@user)
-      = @user.likes.count
+      = link_to likes_user_path(@user) do
+        いいねした投稿
+        = @user.likes.count
     .user-detail__following
-      = link_to "フォロー中", user_following_path(@user)
-      = @user.followings.count
+      = link_to user_following_path(@user) do
+        フォロー中
+        = @user.followings.count
     .user-detail__follower
-      = link_to "フォロワー", user_followers_path(@user)
-      = @user.followers.count
+      = link_to user_followers_path(@user) do
+        フォロワー
+        = @user.followers.count
