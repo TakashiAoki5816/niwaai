@@ -88,6 +88,16 @@
     width: 40%;
   }
   .main {
+    .userInfo {
+      &__edit {
+        .editbtn {
+          width: 20%;
+        }
+        .deletebtn {
+          width: 20%;
+        }
+      }
+    }
     .user-detail {
       width: 100%;
     }
