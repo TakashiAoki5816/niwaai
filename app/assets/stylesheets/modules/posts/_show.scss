@@ -253,3 +253,29 @@
   background-size:cover;
   background-position: center center;
 }
+
+// スマホでの表示
+@media (max-width: 480px) {
+  .main {
+    .Postsbox {
+      margin: 10px auto;
+      width: 100%;
+      border: 5px solid rgb(122, 122, 122);
+      &__Imagebox {
+        height: 500px;
+      }
+      .image {
+        height: 500px;
+      }
+      &__mainContent {
+        .contentbox {
+          text-align: center;
+          overflow: scroll;
+        }
+      }
+      #map {
+        height: 400px;
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@
     overflow: hidden;
     position: relative;
     .main_img {
-      z-index:10;
+      z-index: 2;
       opacity: 0;
       width: 100%;
       height: 850px;
@@ -124,7 +124,7 @@
   .mainPosts {
     height: 480px;
     margin: 0 auto 20px auto;
-    border-top: 1px solid #f0f0f0;
+    border: 1px solid #f0f0f0;
     display: flex;
     margin: 0 auto 0 auto;
     &__left {
@@ -156,6 +156,7 @@
 
 }
 
+// アニメーション
 @keyframes anime {
   0% {
     opacity: 0;
@@ -173,5 +174,62 @@
   }
   100% {
     opacity: 0
+  }
+}
+
+// スマホでの表示
+@media (max-width: 480px) {
+  .wrapper {
+    .mainimage {
+      height: 500px;
+      .main_img {
+        height: 500px;
+      }
+    }
+    .mainAppInfo {
+      margin: 50px 15px;
+      padding: 10px;
+      .App-name {
+        padding: 5px;
+        h2 {
+          font-size: 1.8rem;
+        }
+      }
+    }
+    .mainInfo {
+      display: flex;
+      flex-direction: column-reverse;
+      height: auto;
+      &__left {
+        width: 100%;
+      }
+      &__right {
+        width: 100%;
+        height: 300px;
+      }
+    }
+    .mainGoogle {
+      display: block;
+      height: auto;
+      &__left {
+        width: 100%;
+        height: 300px;
+      }
+      &__right {
+        width: 100%;
+      }
+    }
+    .mainPosts {
+      display: flex;
+      flex-direction: column-reverse;
+      height: auto;
+      &__left {
+        width: 100%;
+      }
+      &__right {
+        width: 100%;
+        height: 300px;
+      }
+    }
   }
 }
