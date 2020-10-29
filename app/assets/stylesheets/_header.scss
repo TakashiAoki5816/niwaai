@@ -14,11 +14,8 @@
     .searchform {
       margin: 23px 0 0 20px;
       .search-input {
-        width: 80%;
+        width: 70%;
       }
-    }
-    .Toggle {
-      display: none;
     }
   }
   .menu {
@@ -47,12 +44,14 @@
     display: block;
     &__left {
       .logo {
+        margin-left: 10px;
         width: 80px;
         img {
           width: 90px;
         }
       }
       .searchform {
+        width: 50%;
         margin: 25px 0 0 15px;
         .search-input {
           width: 65%;
@@ -68,17 +67,15 @@
   // ハンバーガーメニューの表示
   .menu {
     position: relative;
-    right: -70%;
     z-index: 10;
     text-align:center;
     background-color:rgba(255,255,255,1.0);
     transition: 0.5s ease;/*滑らかに表示*/
-    -webkit-transform: translateX(100%);/*画面より100%外へ押し出し非表示にさせる*/
+    transform: translateX(-120%);
   }
   .menu.open {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);/*メニューを元の位置へ戻す*/
-    right: 0;
   }
   .Toggle {
     display: block;
