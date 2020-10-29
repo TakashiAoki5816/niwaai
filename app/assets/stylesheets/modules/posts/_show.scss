@@ -201,7 +201,7 @@
         border-radius: 10px;
       }
       .form__submit {
-        width: 100px;
+        width: 15%;
         float: right;
       }
     }
@@ -271,6 +271,11 @@
         .contentbox {
           text-align: center;
           overflow: scroll;
+        }
+      }
+      .Comments-form {
+        .form__submit {
+          width: 35%;
         }
       }
       #map {
