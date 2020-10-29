@@ -156,6 +156,7 @@
 
 }
 
+// アニメーション
 @keyframes anime {
   0% {
     opacity: 0;
@@ -176,13 +177,18 @@
   }
 }
 
+// スマホでの表示
 @media (max-width: 480px) {
   .wrapper {
     .mainimage {
-      height: 400px;
+      height: 500px;
       .main_img {
-        height: 400px;
+        height: 500px;
       }
+    }
+    .mainAppInfo {
+      margin: 50px 15px;
+      padding: 10px;
     }
     .mainInfo {
       display: flex;
