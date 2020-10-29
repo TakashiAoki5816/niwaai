@@ -17,21 +17,113 @@
         width: 80%;
       }
     }
+    .Toggle {
+      display: none;
+    }
   }
-  &__right {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-    font-size: 18px;
-    li {
-      margin-right: 20px;
+  .menu {
+    margin: 20px;
+    .header__right {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      li {
+        margin-right: 20px;
+      }
+      a {
+        color: #398a36;
+      }
+      li a:hover {
+        color: #46dd53;
+        text-decoration: none;
+      }
     }
-    a {
-      color: #398a36;
+  }
+}
+
+// スマホでの表示
+@media (max-width: 480px) {
+  .header {
+    display: block;
+    &__left {
+      .logo {
+        width: 80px;
+        img {
+          width: 90px;
+        }
+      }
+      .searchform {
+        margin: 10px 0 0 15px;
+        .search-input {
+          width: 85%;
+          font-size: 14px;
+        }
+      }
     }
-    li a:hover {
-      color: #46dd53;
-      text-decoration: none;
+    .header__right {
+      display: flex;
+      flex-direction: column;
     }
+  }
+  // ハンバーガーメニューの表示
+  .menu {
+    position: relative;
+    right: -70%;
+    z-index: 10;
+    text-align:center;
+    background-color:rgba(255,255,255,1.0);
+    transition: 0.5s ease;/*滑らかに表示*/
+    -webkit-transform: translateX(100%);/*画面より100%外へ押し出し非表示にさせる*/
+  }
+  .menu.open {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);/*メニューを元の位置へ戻す*/
+    right: 0;
+  }
+  .Toggle {
+    display: block;
+    position: absolute;    /* bodyに対しての絶対位置指定 */
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    z-index: 3;
+    right: 20px;
+    top: 15px;
+  }
+
+  .Toggle span {
+    display: block;
+    position: absolute;
+    width: 50px;
+    border-bottom: solid 4px #333;
+    -webkit-transition: .35s ease-in-out;	/*変化の速度を指定*/
+    -moz-transition: .35s ease-in-out;		/*変化の速度を指定*/
+    transition: .35s ease-in-out;			/*変化の速度を指定*/
+  }
+  /*各ボーダー少しずつずらす*/
+  .Toggle span:nth-child(1) {
+    top:5px;
+  }
+  .Toggle span:nth-child(2) {
+    top: 18px;
+  }
+  .Toggle span:nth-child(3) {
+    top: 32px;
+  }
+  .Toggle.active span:nth-child(1) {
+    top: 18px;
+  /* 1番目のspanをマイナス45度に */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  /* 2番目と3番目のspanを45度に */
+  .Toggle.active span:nth-child(2),
+  .Toggle.active span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
   }
 }
