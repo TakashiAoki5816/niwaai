@@ -79,3 +79,17 @@
   border-radius: 100vh;
   background-color: white;
 }
+
+@media (max-width: 480px) {
+  .follow-now {
+    width: 40%;
+  }
+  .follows {
+    width: 40%;
+  }
+  .main {
+    .user-detail {
+      width: 100%;
+    }
+  }
+}
