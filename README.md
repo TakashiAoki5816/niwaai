@@ -38,6 +38,7 @@ https://www.niwaai.com
   - Google API(Maps JavaScript API、Geocoding API)
   - 非同期通信(いいね・コメント・フォロー)
   - HTTPS通信(AWS Certificate Manager)
+  - レスポンシブ対応
   - チーム開発を意識したGitHubの活用(プルリク、マージ)
 ## 機能一覧
 - ユーザー登録、ログイン機能（devise）
@@ -75,7 +76,6 @@ Google APIのPlaces APIを利用すると上記の機能が実装できそうな
 - 通知機能
 - タグ機能
 - リファクタリング
-- レスポンシブ対応
 ## About Me
 現在22歳で今年3月に大学を卒業しました。<br>
 6/8〜8/17までテックキャンプに通っていました。<br>
