@@ -7,6 +7,11 @@
   margin: 0 auto;
   border: 1px solid #cecece;
 }
+@mixin main-background-image {
+  width: 60%;
+  background-size:cover;
+  background-position: center center;
+}
 
 .wrapper {
   background-color: #ffffff;
@@ -91,19 +96,15 @@
       }
     }
     &__right {
-      width: 60%;
+      @include main-background-image;
       background-image: image-url("pict/kiyosumi.jpg");
-      background-size:cover;
-      background-position: center center;
     }
   }
   .mainGoogle {
     @include mainbox;
     &__left {
-      width: 60%;
+      @include main-background-image;
       background-image: image-url("pict/googlemap.png");
-      background-size:cover;
-      background-position: center center;
     }
     &__right {
       width: 40%;
@@ -147,10 +148,8 @@
       }
     }
     &__right {
-      width: 60%;
+      @include main-background-image;
       background-image: image-url("pict/kiyosumi3.jpg");
-      background-size:cover;
-      background-position: center center;
     }
   }
 
