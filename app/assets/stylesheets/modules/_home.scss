@@ -1,6 +1,9 @@
 @mixin font-family {
   font-family: "M PLUS Rounded 1c";
 }
+@mixin main {
+
+}
 
 .wrapper {
   background-color: #ffffff;
@@ -96,7 +99,7 @@
   }
   .mainGoogle {
     height: 480px;
-    border: 1px solid #f0f0f0;
+    border: 1px solid #cecece;
     display: flex;
     margin: 0 auto;
     &__left {
@@ -128,7 +131,7 @@
   .mainPosts {
     height: 480px;
     margin: 0 auto 20px auto;
-    border: 1px solid #f0f0f0;
+    border: 1px solid #cecece;
     display: flex;
     margin: 0 auto 0 auto;
     &__left {
