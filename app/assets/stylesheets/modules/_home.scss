@@ -1,8 +1,11 @@
 @mixin font-family {
   font-family: "M PLUS Rounded 1c";
 }
-@mixin main {
-
+@mixin mainbox {
+  height: 480px;
+  display: flex;
+  margin: 0 auto;
+  border: 1px solid #cecece;
 }
 
 .wrapper {
@@ -63,10 +66,7 @@
   }
   // アプリ紹介
   .mainInfo {
-    height: 480px;
-    display: flex;
-    margin: 0 auto;
-    border: 1px solid #cecece;
+    @include mainbox;
     &__left {
       width: 40%;
       .left-title {
@@ -98,10 +98,7 @@
     }
   }
   .mainGoogle {
-    height: 480px;
-    border: 1px solid #cecece;
-    display: flex;
-    margin: 0 auto;
+    @include mainbox;
     &__left {
       width: 60%;
       background-image: image-url("pict/googlemap.png");
@@ -129,11 +126,7 @@
     }
   }
   .mainPosts {
-    height: 480px;
-    margin: 0 auto 20px auto;
-    border: 1px solid #cecece;
-    display: flex;
-    margin: 0 auto 0 auto;
+    @include mainbox;
     &__left {
       width: 40%;
       .left-title {
