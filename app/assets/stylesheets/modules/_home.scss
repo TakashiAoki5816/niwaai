@@ -1,3 +1,7 @@
+@mixin font-family {
+  font-family: "M PLUS Rounded 1c";
+}
+
 .wrapper {
   background-color: #ffffff;
   // スライドショー
@@ -42,7 +46,7 @@
       margin-bottom: 80px;
       h2 {
         color: #398a36;
-        font-family: "M PLUS Rounded 1c";
+        @include font-family;
       }
     }
     .introduce {
@@ -50,7 +54,7 @@
       p {
         font-size: 20px;
         margin-bottom: 25px;
-        font-family: "M PLUS Rounded 1c";
+        @include font-family;
       }
     }
   }
@@ -67,7 +71,7 @@
         margin: 30px auto 80px auto;
         span {
           border-bottom: 6px solid rgb(102, 192, 107);
-          font-family: "M PLUS Rounded 1c";
+          @include font-family;
         }
       }
       .content {
@@ -75,11 +79,11 @@
         margin: 0 auto;
         p {
           font-size: 18px;
-          font-family: "M PLUS Rounded 1c";
+          @include font-family;
         }
         span {
           border-bottom: 4px solid rgb(102, 192, 107);
-          font-family: "M PLUS Rounded 1c";
+          @include font-family;
         }
       }
     }
@@ -108,7 +112,7 @@
         margin: 30px auto 80px auto;
         span {
           border-bottom: 6px solid rgb(102, 192, 107);
-          font-family: "M PLUS Rounded 1c";
+          @include font-family;
         }
       }
       .content {
@@ -116,7 +120,7 @@
         margin: 0 auto;
         p {
           font-size: 18px;
-          font-family: "M PLUS Rounded 1c";
+          @include font-family;
         }
       }
     }
@@ -134,7 +138,7 @@
         margin: 30px auto 80px auto;
         span {
           border-bottom: 6px solid rgb(102, 192, 107);
-          font-family: "M PLUS Rounded 1c";
+          @include font-family;
         }
       }
       .content {
@@ -142,7 +146,7 @@
         margin: 0 auto;
         p {
           font-size: 18px;
-          font-family: "M PLUS Rounded 1c";
+          @include font-family;
         }
       }
     }
