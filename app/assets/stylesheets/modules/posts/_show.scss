@@ -263,15 +263,6 @@
   }
 }
 
-// ゲストユーザー
-.user-image {
-  width: 50px;
-  height: 50px;
-  background-image: image-url("pict/guest.jpg");
-  background-size:cover;
-  background-position: center center;
-}
-
 // スマホでの表示
 @media (max-width: 480px) {
   .main {
