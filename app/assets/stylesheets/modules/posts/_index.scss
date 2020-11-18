@@ -3,6 +3,7 @@
   height: auto;
   width: 100%;
   font-family: "M PLUS Rounded 1c";
+  // 投稿一覧（タイトル）
   .ContentsInfo {
     margin-bottom: 50px;
     &__name {
@@ -12,6 +13,7 @@
       margin-bottom: 50px;
     }
   }
+  // 全投稿 枠組み
   .Contents {
     height: auto;
     width: 100%;
@@ -19,30 +21,36 @@
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+    // 各投稿 枠組み
     .Contents-box {
       height: auto;
       width: 350px;
       margin: 0 auto 50px auto;
       border: 10px solid rgb(158, 158, 158);
       border-radius: 10px;
+      // 投稿ヘッダー
       &__header {
         height: 50px;
         border-bottom: 1px solid gray;
         margin-top: 10px;
+        // 公園・庭園名
         .garden-name {
           text-align: center;
           font-size: 23px;
           color: #398a36;
         }
       }
+      // ユーザー 枠組み
       &__user {
         height: auto;
         display: flex;
         align-items: center;
+        // ユーザーイメージ
         .user-image {
           height: 50px;
           width: 50px;
         }
+        // ユーザーネーム
         .username {
           a {
             color: #383838;
@@ -52,6 +60,7 @@
           }
         }
       }
+      // 投稿タイトル 枠組み
       &__titlebox {
         height: 50px;
         border-top: 1px solid grey;
@@ -65,6 +74,7 @@
           }
         }
       }
+      // 庭園写真 枠組み
       &__imagebox {
         height: 250px;
         width: 100%;
@@ -76,22 +86,31 @@
           left: 15px;
         }
       }
+      // 投稿フッター
       &__footer {
         height: 50px;
         width: 90%;
         margin: 0 auto;
         display: flex;
         align-items: center;
+        // いいねボタン 枠組み
         .like {
           padding-right: 5px;
           a {
             color: #383838;
           }
           .likebox {
+            // いいねしていない時
             .like-btn {
               height: 10px;
               font-size: 20px;
               color: #808080;
+            }
+            // いいねしている時
+            .unlike-btn {
+              height: 10px;
+              font-size: 20px;
+              color: #e54747;
             }
           }
         }
@@ -104,11 +123,4 @@
 .pagination {
   justify-content: center;
   margin-top: 30px;
-}
-
-
-.unlike-btn {
-  height: 10px;
-  font-size: 20px;
-  color: #e54747;
 }
