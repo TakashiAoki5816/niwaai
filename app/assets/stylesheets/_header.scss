@@ -1,3 +1,4 @@
+// ヘッダー
 .header {
   height: 75px;
   width: 100%;
@@ -6,11 +7,14 @@
   display: flex;
   justify-content: space-between;
   font-family: "M PLUS Rounded 1c";
+  // ヘッダー左部分
   &__left {
     display: flex;
+    // ロゴ
     .logo {
       margin-left: 20px;
     }
+    // 検索フォーム
     .searchform {
       margin: 23px 0 0 20px;
       .search-input {
@@ -18,8 +22,10 @@
       }
     }
   }
+  // ナビメニュー
   .menu {
     margin: 20px;
+    // ヘッダー右部分
     .header__right {
       display: flex;
       align-items: center;
@@ -50,6 +56,7 @@
           width: 90px;
         }
       }
+      // 検索フォーム
       .searchform {
         width: 50%;
         margin: 10px 0 0 15px;
