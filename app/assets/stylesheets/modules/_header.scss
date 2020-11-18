@@ -1,3 +1,10 @@
+@mixin btn-config {
+  width: 4%;
+  padding: 2px;
+  border: 1px solid #747474;
+  border-radius: 100vh;
+}
+// マイページ
 .main {
   height: auto;
   margin: 0 auto;
@@ -19,21 +26,15 @@
       justify-content: center;
       margin-bottom: 10px;
       .editbtn {
-        width: 4%;
-        padding: 2px;
+        @include btn-config;
         margin-right: 10px;
-        border: 1px solid #747474;
-        border-radius: 100vh;
         background-color: rgb(97, 157, 235);
         a {
           color: #fff;
         }
       }
       .deletebtn {
-        width: 4%;
-        padding: 2px;
-        border: 1px solid #747474;
-        border-radius: 100vh;
+        @include btn-config;
         background-color: rgb(255, 52, 52);
         a {
           color: #fff;
