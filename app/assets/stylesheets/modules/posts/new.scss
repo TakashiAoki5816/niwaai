@@ -1,16 +1,20 @@
+// 新規投稿
 .Postsbox {
   height: auto;
   width: 90%;
   margin: 40px auto 0 auto;
   font-family: "M PLUS Rounded 1c";
+  // 投稿フォーム
   .Postform {
     width: 100%;
     height: auto;
     margin-bottom: 100px;
+    // 新規投稿（タイトル）
     .Post-heading {
       margin: 0 auto 30px auto;
       padding-left: 15px;
     }
+    // 各フォーム
     .form-group {
       margin-bottom: 2rem;
     }
