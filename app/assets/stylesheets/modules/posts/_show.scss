@@ -1,3 +1,7 @@
+@mixin like-config {
+  height: auto;
+  font-size: 25px;
+}
 // 投稿詳細ページ
 .main {
   font-family: "M PLUS Rounded 1c";
@@ -83,15 +87,13 @@
           padding-right: 5px;
           // いいねしている時
           .unlike-btn {
-            height: auto;
-            font-size: 25px;
+            @include like-config;
             color: #e54747;
           }
           // ログインしていない時のいいねボタン
           .likes-btn {
+            @include like-config;
             margin-top: 7px;
-            height: auto;
-            font-size: 25px;
             color: #e54747;
           }
           // ログインしていない時のいいね数
@@ -107,14 +109,12 @@
             }
             // いいねしていない時
             .like-btn {
-              height: auto;
-              font-size: 25px;
+              @include like-config;
               color: #808080;
             }
             // いいねしている時
             .unlike-btn {
-              height: auto;
-              font-size: 25px;
+              @include like-config;
               color: #e54747;
             }
           }
