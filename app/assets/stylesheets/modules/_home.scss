@@ -1,18 +1,29 @@
 @mixin font-family {
   font-family: "M PLUS Rounded 1c";
 }
+// アプリ紹介 枠組み
 @mixin mainbox {
   height: 480px;
   display: flex;
   margin: 0 auto;
   border: 1px solid #cecece;
 }
+// アプリ紹介 背景画像の設定
 @mixin main-background-image {
   width: 60%;
   background-size:cover;
   background-position: center center;
 }
-
+// タイトルのwidth・margin設定
+@mixin title-width-margin {
+  width: 70%;
+  margin: 30px auto 80px auto;
+}
+// コンテンツのwidth・margin設定
+@mixin content-width-margin {
+  width: 70%;
+  margin: 0 auto;
+}
 .wrapper {
   background-color: #ffffff;
   // スライドショー
@@ -34,6 +45,7 @@
       -webkit-animation: anime 30s 0s infinite;
       animation: anime 30s 0s infinite;
     }
+    // 画像が切り替わるスピード
     .main_img:nth-of-type(2) {
       -webkit-animation-delay: 6s;
       animation-delay: 6s; }
@@ -50,6 +62,7 @@
       -webkit-animation-delay: 24s;
       animation-delay: 24s; }
   }
+  // キャッチコピー
   .mainAppInfo {
     text-align: center;
     margin: 80px auto;
@@ -70,21 +83,20 @@
     }
   }
   // アプリ紹介
+  // Niwaaiとは
   .mainInfo {
     @include mainbox;
     &__left {
       width: 40%;
       .left-title {
-        width: 70%;
-        margin: 30px auto 80px auto;
+        @include title-width-margin;
         span {
           border-bottom: 6px solid rgb(102, 192, 107);
           @include font-family;
         }
       }
       .content {
-        width: 70%;
-        margin: 0 auto;
+        @include content-width-margin;
         p {
           font-size: 18px;
           @include font-family;
@@ -100,6 +112,7 @@
       background-image: image-url("pict/kiyosumi.jpg");
     }
   }
+  // 地図の表示
   .mainGoogle {
     @include mainbox;
     &__left {
@@ -109,16 +122,14 @@
     &__right {
       width: 40%;
       .right-title {
-        width: 70%;
-        margin: 30px auto 80px auto;
+        @include title-width-margin;
         span {
           border-bottom: 6px solid rgb(102, 192, 107);
           @include font-family;
         }
       }
       .content {
-        width: 70%;
-        margin: 0 auto;
+        @include content-width-margin;
         p {
           font-size: 18px;
           @include font-family;
@@ -126,21 +137,20 @@
       }
     }
   }
+  // Niwaaiでできること
   .mainPosts {
     @include mainbox;
     &__left {
       width: 40%;
       .left-title {
-        width: 70%;
-        margin: 30px auto 80px auto;
+        @include title-width-margin;
         span {
           border-bottom: 6px solid rgb(102, 192, 107);
           @include font-family;
         }
       }
       .content {
-        width: 70%;
-        margin: 0 auto;
+        @include content-width-margin;
         p {
           font-size: 18px;
           @include font-family;
@@ -185,6 +195,7 @@
         height: 500px;
       }
     }
+    // キャッチコピー
     .mainAppInfo {
       margin: 50px 15px;
       padding: 10px;
@@ -195,6 +206,7 @@
         }
       }
     }
+    // Niwaaiとは
     .mainInfo {
       display: flex;
       flex-direction: column-reverse;
@@ -207,6 +219,7 @@
         height: 300px;
       }
     }
+    // 地図の表示
     .mainGoogle {
       display: block;
       height: auto;
@@ -218,6 +231,7 @@
         width: 100%;
       }
     }
+    // Niwaaiでできること
     .mainPosts {
       display: flex;
       flex-direction: column-reverse;
