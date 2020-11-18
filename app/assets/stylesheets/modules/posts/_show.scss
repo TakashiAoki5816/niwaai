@@ -1,22 +1,25 @@
+// 投稿詳細ページ
 .main {
   font-family: "M PLUS Rounded 1c";
+  // 投稿詳細 枠組み
   .Postsbox {
     width: 90%;
     margin: 20px auto;
     height: auto;
     border: 10px solid rgb(122, 122, 122);
     border-radius: 10px;
+    // 投稿詳細ヘッダー
     &__header {
       height: 60px;
       border-bottom: 1px solid gray;
       display: flex;
       justify-content: space-between;
+      // ヘッダー左部分
       .left-header {
         display: flex;
         align-items: center;
         justify-content: center;
-        .userimage {
-        }
+        // ユーザーネーム
         .username {
           font-size: 16px;
           a {
@@ -27,17 +30,14 @@
           }
         }
       }
+      // ヘッダー右部分
       .right-header {
         display: flex;
         align-items: center;
         font-size: 18px;
-        .create-title {
-        }
-        .create-date {
-
-        }
       }
     }
+    // 庭園写真 枠組み
     &__Imagebox {
       height: auto;
       position: relative;
@@ -46,6 +46,7 @@
         width: 100%;
         max-width: 100%;
       }
+      // 公園・庭園名 枠組み
       .garden_namebox {
         position: absolute;
         bottom: 0;
@@ -53,6 +54,7 @@
         height: 70px;
         width: auto;
         background-color: rgba(255,255,255,.5);
+        // 公園・庭園名
         &__garden_name {
           font-size: 30px;
           color: #383838;
@@ -61,46 +63,55 @@
         }
       }
     }
+    // いいね・コメント・編集・削除
     &__about {
       height: auto;
       display: flex;
       justify-content: space-between;
       width: 100%;
+      // いいね・コメント枠組み
       .like-comment {
         display: flex;
         width: 100%;
         height: 50px;
         margin: 0 auto;
         align-items: center;
+        // いいねボタン
         .like {
           height: auto;
           display: flex;
           padding-right: 5px;
+          // いいねしている時
           .unlike-btn {
             height: auto;
             font-size: 25px;
             color: #e54747;
           }
+          // ログインしていない時のいいねボタン
           .likes-btn {
             margin-top: 7px;
             height: auto;
             font-size: 25px;
             color: #e54747;
           }
+          // ログインしていない時のいいね数
           .likecount {
             margin-top: 2px;
             font-size: 24px;
           }
+          // いいね 枠組み
           .likebox {
             a {
               font-size: 25px;
               color: #212529;
             }
+            // いいねしていない時
             .like-btn {
               height: auto;
               font-size: 25px;
               color: #808080;
             }
+            // いいねしている時
             .unlike-btn {
               height: auto;
               font-size: 25px;
@@ -108,14 +119,17 @@
             }
           }
         }
+        // コメント 枠組み
         .comment {
           padding-top: 1px;
           font-size: 24px;
         }
       }
     }
+    // メインコンテンツ
     &__mainContent {
       margin-bottom: 50px;
+      // 投稿タイトル 枠組み
       .titlebox {
         height: auto;
         margin-bottom: 30px;
@@ -126,14 +140,14 @@
           font-weight: bold;
         }
       }
-      .contentbox {
+      // 説明 枠組み
+      .explanation-box {
         width: 90%;
         height: auto;
         margin: 10px auto;
-        .content {
-        }
       }
     }
+    // コメント一覧（タイトル）
     .Comments {
       text-align: center;
       font-size: 24px;
@@ -141,15 +155,17 @@
       color: rgb(75, 75, 75);
       margin-bottom: 30px;
     }
-    // コメント一覧
+    // コメント一覧 枠組み
     &__Commentsbox {
       height: auto;
+      // 各コメント 枠組み
       .Commentbox {
         height: auto;
         width: 90%;
         padding: 8px;
         margin: 0 auto 15px auto;
         border: 1px solid #cecece;
+        // コメントヘッダー
         .comment-header {
           height: 50px;
           display: flex;
@@ -157,8 +173,6 @@
           .left {
             display: flex;
             align-items: center;
-            .userimage {
-            }
             .right {
               .username {
                 a {
@@ -168,18 +182,16 @@
                   color: rgb(0, 132, 255);
                 }
               }
-              .created_at {
-              }
             }
           }
         }
+        // コメントコンテンツ
         .Contents {
           margin-top: 20px;
           height: auto;
           display: flex;
           justify-content: space-between;
-          &__Comment {
-          }
+          // コメント削除ボタン
           &__destroy {
             .trash {
               color: #383838;
@@ -191,6 +203,7 @@
         }
       }
     }
+    // コメントフォーム 枠組み
     .Comments-form {
       height: 100px;
       width: 90%;
@@ -200,6 +213,7 @@
         height: 100px;
         border-radius: 10px;
       }
+      // コメントボタン
       .form__submit {
         width: 15%;
         float: right;
@@ -212,6 +226,7 @@
       font-size: 18px;
       margin: 50px 0 60px 0;
     }
+    // GoogleMap
     #map {
       height: 700px;
       width: 90%;
@@ -220,12 +235,13 @@
   }
 }
 
-
+// 投稿編集・削除 枠組み
 .edit {
   width: 100%;
   margin-top: 8px;
   display: flex;
   justify-content: flex-end;
+  // 投稿編集
   .editbtn {
     margin-bottom: 18px;
     padding-right: 1px;
@@ -236,6 +252,7 @@
       color: #fff;
     }
   }
+  // 投稿削除
   .deletebtn {
     a {
       padding: 10px;
@@ -246,6 +263,7 @@
   }
 }
 
+// ゲストユーザー
 .user-image {
   width: 50px;
   height: 50px;

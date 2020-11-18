@@ -4,7 +4,7 @@
       .left-header
         -if @post.user.image.url.nil?
           .userimage
-            = image_tag "pict/guest.jpg",size: "60x60"
+            = image_tag "pict/guest.jpg", size: "60x60"
         -else
           .userimage
             = image_tag @post.user.image.url, size: "60x60"
@@ -43,7 +43,7 @@
       .titlebox
         .title
           = @post.title
-      .contentbox
+      .explanation-box
         .content
           = @post.content
     .Comments コメント一覧
