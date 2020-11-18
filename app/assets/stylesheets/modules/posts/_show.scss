@@ -112,11 +112,6 @@
               @include like-config;
               color: #808080;
             }
-            // いいねしている時
-            .unlike-btn {
-              @include like-config;
-              color: #e54747;
-            }
           }
         }
         // コメント 枠組み
@@ -233,6 +228,12 @@
       margin: 0 auto 20px auto;
     }
   }
+}
+
+.unlike-btn {
+  height: 10px;
+  font-size: 20px;
+  color: #e54747;
 }
 
 // 投稿編集・削除 枠組み
