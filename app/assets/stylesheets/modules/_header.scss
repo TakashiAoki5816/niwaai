@@ -1,6 +1,14 @@
+// 編集・削除ボタンの設定
 @mixin btn-config {
   width: 4%;
   padding: 2px;
+  border: 1px solid #747474;
+  border-radius: 100vh;
+}
+// フォローボタンの設定
+@mixin follow-config {
+  width: 7%;
+  padding: 3px;
   border: 1px solid #747474;
   border-radius: 100vh;
 }
@@ -11,13 +19,16 @@
   .userInfo {
     text-align: center;
     margin-top: 10px;
+    // ユーザー画像
     &__image {
       margin-bottom: 5px;
     }
+    // ユーザーネーム
     &__name {
       font-size: 22px;
       font-weight: bold;
     }
+    // ユーザーアドレス
     &__email {
       margin-bottom: 5px;
     }
@@ -25,6 +36,7 @@
       display: flex;
       justify-content: center;
       margin-bottom: 10px;
+      // 編集ボタン
       .editbtn {
         @include btn-config;
         margin-right: 10px;
@@ -33,6 +45,7 @@
           color: #fff;
         }
       }
+      // 削除ボタン
       .deletebtn {
         @include btn-config;
         background-color: rgb(255, 52, 52);
@@ -45,6 +58,7 @@
       margin-bottom: 10px;
     }
   }
+  // ユーザー詳細の枠組み
   .user-detail {
     height: 80px;
     width: 90%;
@@ -63,21 +77,17 @@
   }
 }
 
+// フォローしている時
 .follow-now {
-  width: 7%;
-  padding: 3px;
-  border: 1px solid #747474;
-  border-radius: 100vh;
-  background-color: rgb(36, 177, 196);
-  color: rgb(243, 243, 243);
+  @include follow-config;
   font-weight: bold;
+  color: rgb(243, 243, 243);
+  background-color: rgb(36, 177, 196);
 }
+// フォローしていない時
 .follows {
-  width: 7%;
-  padding: 3px;
+  @include follow-config;
   color: #383838;
-  border: 1px solid #747474;
-  border-radius: 100vh;
   background-color: white;
 }
 
