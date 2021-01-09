@@ -5,6 +5,7 @@ $(function(){
                     <div class="comment-header">
                       <div class="left">
                         <div class="user-image">
+                          <img src="/assets/pict/guest.jpg" width="50" height="50">
                         </div>
                         <div class="right">
                           <div class="username">
